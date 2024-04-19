@@ -1,0 +1,746 @@
+{
+  "primary_pipeline" : "d1dc4be5-4773-4a22-b66a-50a007c3ee3f",
+  "pipelines" : [ {
+    "nodes" : [ {
+      "outputs" : [ {
+        "id" : "b38584b6-d7f5-4e0c-b302-47fc7b62aa01",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "72badf1b-b1fd-4805-8e22-a064d24a24d6"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        },
+        "parameters" : {
+          "buf_free_run" : 50,
+          "queue_upper_size" : 0,
+          "max_mem_buf_size" : 3145728,
+          "disk_write_inc" : 1048576
+        },
+        "schema_ref" : "a085c946-59ff-4706-bd5e-45f50f22b546"
+      } ],
+      "op" : "bigqueryPX",
+      "connection" : {
+        "ref" : "be6708db-64dc-41da-b00f-8f2a3596c350",
+        "project_ref" : "39a75fb9-584b-4281-8f54-772fb337aaa0",
+        "properties" : {
+          "_java._heap_size" : 256,
+          "before_after.after_node" : "",
+          "before_after.before_node.fail_on_error" : true,
+          "before_after.after_node.fail_on_error" : true,
+          "user_class_name" : "com.ibm.iis.cc.bigquery.BigQuery",
+          "database_name" : "",
+          "skip_aftersql" : "false",
+          "partitioned" : false,
+          "before_after.before_node" : "",
+          "select_statement" : "SELECT\n    NUM_AA_TT AS num_aa_tt,\n    COD_KEY_PIAZZA_REGOLAMENTO AS cod_key_piazza_regolamento,\n    substr(M1.NOM_PSET, 1, 20) AS cod_key_piazza_regolamento_rel,\n    M1.COD_PSET AS cod_piazza_regolamento,\n    M1.NOM_PSET AS des_piazza_regolamento,\n    substr(concat(substr(CAST(NUM_AA_TT as STRING), 1, 5), '|', coalesce(COD_KEY_PIAZZA_REGOLAMENTO, 'NULL')), 1, 100) AS cod_chiave_dq,\n    substr(concat('#COD_SIST_ALIMNTNT#', '   '), 1, 3) AS cod_sist_alimntnt,\n    substr('#COD_SSA_PROVNNZ#', 1, 10) AS cod_ssa_provnnz\n  FROM\n    #$BQ_PROJID_T4777A#.#$BQ_DSNAME_T4777A#.VD_T4_DB_PSET AS M1\n    CROSS JOIN UNNEST(ARRAY[\n      CASE\n        WHEN CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(right(left('#TMS_CARICAMENTO#', 6), 2)) as INT64) >= 1\n         AND CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(right(left('#TMS_CARICAMENTO#', 6), 2)) as INT64) <= 3 THEN CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(concat(format_date('%Y', date_add(parse_date('%Y%m%d', left('#TMS_CARICAMENTO#', 8)), interval -4 MONTH)), '4')) as INT64)\n        WHEN CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(right(left('#TMS_CARICAMENTO#', 6), 2)) as INT64) >= 4\n         AND CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(right(left('#TMS_CARICAMENTO#', 6), 2)) as INT64) <= 6 THEN CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(concat(left('#TMS_CARICAMENTO#', 4), '1')) as INT64)\n        WHEN CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(right(left('#TMS_CARICAMENTO#', 6), 2)) as INT64) >= 7\n         AND CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(right(left('#TMS_CARICAMENTO#', 6), 2)) as INT64) <= 9 THEN CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(concat(left('#TMS_CARICAMENTO#', 4), '2')) as INT64)\n        WHEN CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(right(left('#TMS_CARICAMENTO#', 6), 2)) as INT64) >= 10\n         AND CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(right(left('#TMS_CARICAMENTO#', 6), 2)) as INT64) <= 12 THEN CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(concat(left('#TMS_CARICAMENTO#', 4), '3')) as INT64)\n      END\n    ]) AS num_aa_tt\n    CROSS JOIN UNNEST(ARRAY[\n      substr(concat(substr(concat('#COD_SIST_ALIMNTNT#', '   '), 1, 3), M1.NOM_PSET), 1, 23)\n    ]) AS cod_key_piazza_regolamento;",
+          "before_after.before" : "",
+          "before_after.before.fail_on_error" : true,
+          "node_number" : 0,
+          "read_mode" : "select",
+          "before_after.after" : "",
+          "node_count" : 1,
+          "before_after.after.fail_on_error" : true,
+          "use_gcs_staging" : false,
+          "rcp" : true
+        },
+        "name" : "BQ_Connection_SSCC0"
+      },
+      "id" : "4de1e589-2ab5-4b74-b24c-f1ec8160c169",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/bigqueryPX.svg",
+          "x_pos" : 168.0,
+          "label" : "ReadTd_VD_T4_DB_PSET",
+          "y_pos" : 312.0
+        }
+      },
+      "parameters" : {
+        "output_count" : 1,
+        "input_count" : 0,
+        "allow_column_mapping" : false
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "173ac3e6-cc80-4610-b2fa-596457b2342c",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "74c8eb02-0c3c-4540-96ec-2560f1e64e7c"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 2147483647
+            }
+          }
+        },
+        "parameters" : {
+          "Reject" : false,
+          "RowLimit" : 0,
+          "valueDerivation" : [ {
+            "parsedExpression" : "CheckNull",
+            "stageVars" : "CheckNull",
+            "columnName" : "FLG_CHK_NUL"
+          }, {
+            "parsedExpression" : "CheckNull",
+            "stageVars" : "CheckNull",
+            "columnName" : "FLG_CHK_FOR"
+          }, {
+            "parsedExpression" : "CheckNull",
+            "stageVars" : "CheckNull",
+            "columnName" : "FLG_CHK_DUP"
+          } ],
+          "buf_free_run" : 50,
+          "queue_upper_size" : 0,
+          "max_mem_buf_size" : 3145728,
+          "disk_write_inc" : 1048576
+        },
+        "schema_ref" : "a360e820-9456-47f5-8ae3-b22ca25df17e"
+      } ],
+      "op" : "CTransformerStage",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "4de1e589-2ab5-4b74-b24c-f1ec8160c169",
+          "type_attr" : "PRIMARY",
+          "id" : "72badf1b-b1fd-4805-8e22-a064d24a24d6",
+          "link_name" : "Master_1",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "path" : "",
+                "outline" : true,
+                "hotspot" : false,
+                "id" : "Master_1",
+                "label" : "Master_1",
+                "position" : "middle",
+                "class_name" : ""
+              } ]
+            }
+          },
+          "port_id_ref" : "b38584b6-d7f5-4e0c-b302-47fc7b62aa01"
+        } ],
+        "id" : "7c6b81b0-00ae-4b1b-bdf6-f3ae385d0246",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "parameters" : {
+          "part_coll" : "part_type",
+          "runtime_column_propagation" : 0
+        },
+        "schema_ref" : "a085c946-59ff-4706-bd5e-45f50f22b546"
+      } ],
+      "id" : "116f5df7-e96c-4b34-a1a1-bd9e9972ca31",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "7c6b81b0-00ae-4b1b-bdf6-f3ae385d0246",
+          "outputs_order" : "173ac3e6-cc80-4610-b2fa-596457b2342c"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/CTransformerStage.svg",
+          "x_pos" : 432.0,
+          "label" : "Trf_RecordValidi",
+          "y_pos" : 312.0
+        }
+      },
+      "parameters" : {
+        "MaxLoopIterations" : 0,
+        "output_count" : 1,
+        "BlockSizeSelectedType" : "systemSelected",
+        "StageVariables" : [ {
+          "Precision" : 255,
+          "Derivation" : "IF INDEX(Master_1.COD_CHIAVE_DQ,'NULL',1) > 0 THEN sETnULL() ELSE 0",
+          "SqlType" : "VARCHAR",
+          "Scale" : 0,
+          "Name" : "CheckNull"
+        } ],
+        "input_count" : 1,
+        "BlockSize" : 0,
+        "SKKeySourceType" : "file"
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        }
+      } ],
+      "op" : "bigqueryPX",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "116f5df7-e96c-4b34-a1a1-bd9e9972ca31",
+          "type_attr" : "PRIMARY",
+          "id" : "74c8eb02-0c3c-4540-96ec-2560f1e64e7c",
+          "link_name" : "Master_2",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "path" : "",
+                "outline" : true,
+                "hotspot" : false,
+                "id" : "Master_2",
+                "label" : "Master_2",
+                "position" : "middle",
+                "class_name" : ""
+              } ]
+            }
+          },
+          "port_id_ref" : "173ac3e6-cc80-4610-b2fa-596457b2342c"
+        } ],
+        "id" : "ff182801-196d-40d6-96cd-1c76ee035688",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        },
+        "parameters" : {
+          "part_coll" : "part_type",
+          "runtime_column_propagation" : 0
+        },
+        "schema_ref" : "a360e820-9456-47f5-8ae3-b22ca25df17e"
+      } ],
+      "connection" : {
+        "ref" : "be6708db-64dc-41da-b00f-8f2a3596c350",
+        "project_ref" : "39a75fb9-584b-4281-8f54-772fb337aaa0",
+        "properties" : {
+          "_java._heap_size" : 256,
+          "before_after.after_node" : "",
+          "before_after.before_node.fail_on_error" : true,
+          "before_after.after_node.fail_on_error" : true,
+          "user_class_name" : "com.ibm.iis.cc.bigquery.BigQuery",
+          "file_name" : "",
+          "skip_aftersql" : "false",
+          "write_part_size" : "50",
+          "before_after.before_node" : "",
+          "schema_name" : "#$BQ_DSNAME_SSCC0W#",
+          "table_name" : "TW_SSC_RAI_PIAZZA_REGOLAMENTO_TT",
+          "before_after.before" : "TRUNCATE TABLE #$BQ_DSNAME_SSCC0W#.TW_SSC_RAI_PIAZZA_REGOLAMENTO_TT;",
+          "bucket" : "#$GCS_BUCKET_TMP#",
+          "before_after.before.fail_on_error" : true,
+          "write_mode" : "merge",
+          "node_number" : 0,
+          "read_mode" : "general",
+          "before_after.after" : "",
+          "node_count" : 1,
+          "before_after.after.fail_on_error" : true,
+          "table_action" : "append"
+        },
+        "name" : "BQ_Connection_SSCC0"
+      },
+      "id" : "481acfff-9d1a-467a-b9bf-be8d1d47ca1b",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/bigqueryPX.svg",
+          "x_pos" : 696.0,
+          "label" : "WriteTd_TW_SSC_RAI_PIAZZA_REGOLAMENTO_TT",
+          "y_pos" : 312.0
+        }
+      },
+      "parameters" : {
+        "output_count" : 0,
+        "input_count" : 1,
+        "allow_column_mapping" : false
+      }
+    } ],
+    "description" : "Short description: Popolamento TW_SSC_RAI_PIAZZA_REGOLAMENTO_TT. Long description: Popolamento TW_SSC_RAI_PIAZZA_REGOLAMENTO_TT\r\nEstrazione dei dati dalle entità:\r\nT4777A.VD_T4_DB_PSET\r\nTabella di Work popolata:\r\nTW_SSC_RAI_PIAZZA_REGOLAMENTO_TT\r\n-------------------------------------------------------------------------------------------------------------------------------\r\nElenco modifiche Job:\r\n20200414 - GFT: Scrittura Versione 1.0\r\n",
+    "id" : "d1dc4be5-4773-4a22-b66a-50a007c3ee3f",
+    "app_data" : {
+      "datastage" : {
+        "runtime_column_propagation" : "false"
+      },
+      "ui_data" : {
+        "comments" : [ {
+          "associated_id_refs" : [ ],
+          "width" : 390,
+          "x_pos" : 38.0,
+          "id" : "3b207441-da64-434c-9d22-f02715d20e09",
+          "y_pos" : 33.0,
+          "class_name" : "d3-comment-rect",
+          "content" : "Popolamento TW_SSC_RAI_PIAZZA_REGOLAMENTO_TT\r\nEstrazione dei dati dalle entità:\r\nT4777A.VD_T4_DB_PSET\r\nTabella di Work popolata:\r\nTW_SSC_RAI_PIAZZA_REGOLAMENTO_TT\r\n-------------------------------------------------------------------------------------------------------------------------------\r\nElenco modifiche Job:\r\n20200414 - GFT: Scrittura Versione 1.0\r\n",
+          "height" : 221
+        } ]
+      }
+    },
+    "runtime_ref" : "pxOsh"
+  } ],
+  "runtimes" : [ {
+    "name" : "pxOsh",
+    "id" : "pxOsh"
+  } ],
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "schemas" : [ {
+    "id" : "a085c946-59ff-4706-bd5e-45f50f22b546",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "NUM_AA_TT",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 23,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_KEY_PIAZZA_REGOLAMENTO",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 20,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_KEY_PIAZZA_REGOLAMENTO_REL",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 2,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 2,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_PIAZZA_REGOLAMENTO",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 20,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "DES_PIAZZA_REGOLAMENTO",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 100,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_CHIAVE_DQ",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 3,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 3,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_SIST_ALIMNTNT",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_SSA_PROVNNZ",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    } ]
+  }, {
+    "id" : "a360e820-9456-47f5-8ae3-b22ca25df17e",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Master_1.NUM_AA_TT",
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "NUM_AA_TT",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Master_1.COD_KEY_PIAZZA_REGOLAMENTO",
+        "max_length" : 23,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_KEY_PIAZZA_REGOLAMENTO",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Master_1.COD_KEY_PIAZZA_REGOLAMENTO_REL",
+        "max_length" : 20,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_KEY_PIAZZA_REGOLAMENTO_REL",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 2,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Master_1.COD_PIAZZA_REGOLAMENTO",
+        "max_length" : 2,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_PIAZZA_REGOLAMENTO",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Master_1.DES_PIAZZA_REGOLAMENTO",
+        "max_length" : 20,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "DES_PIAZZA_REGOLAMENTO",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Master_1.COD_CHIAVE_DQ",
+        "max_length" : 100,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_CHIAVE_DQ",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 3,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Master_1.COD_SIST_ALIMNTNT",
+        "max_length" : 3,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_SIST_ALIMNTNT",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Master_1.COD_SSA_PROVNNZ",
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_SSA_PROVNNZ",
+      "type" : "string",
+      "app_data" : {
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "FLG_CHK_NUL",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "SMALLINT",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT16"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "FLG_CHK_FOR",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "SMALLINT",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT16"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "FLG_CHK_DUP",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "SMALLINT",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT16"
+      }
+    } ]
+  } ],
+  "doc_type" : "pipeline",
+  "id" : "5c1f9320-cde9-4da4-a2e8-f3995880a599",
+  "app_data" : {
+    "datastage" : {
+      "version" : "3.0.5"
+    },
+    "additionalProperties" : {
+      "ELTDropdown" : {
+        "id" : "nesting",
+        "label" : "Generate nested SQL",
+        "value" : "NESTED_QUERY"
+      },
+      "runMode" : "ELT"
+    }
+  },
+  "version" : "3.0",
+  "parameters" : {
+    "local_parameters" : [ {
+      "name" : "TMS_CARICAMENTO",
+      "type" : "string",
+      "prompt" : "TMS_CARICAMENTO",
+      "value" : "202004142359"
+    }, {
+      "name" : "COD_TIPO_ELABORAZIONE",
+      "type" : "string",
+      "prompt" : "COD_TIPO_ELABORAZIONE",
+      "value" : "ETL"
+    }, {
+      "name" : "COD_SIST_ALIMNTNT",
+      "type" : "string",
+      "prompt" : "COD_SIST_ALIMNTNT",
+      "value" : "TOP"
+    }, {
+      "name" : "COD_SSA_PROVNNZ",
+      "type" : "string",
+      "prompt" : "COD_SSA_PROVNNZ",
+      "value" : "T4"
+    }, {
+      "name" : "$GCS_BUCKET_TMP",
+      "type" : "string",
+      "prompt" : "$GCS_BUCKET_TMP",
+      "value" : "PROJDEF"
+    }, {
+      "name" : "$BQ_PROJID_SSC0",
+      "type" : "string",
+      "prompt" : "$BQ_PROJID_SSC0",
+      "value" : "PROJDEF"
+    }, {
+      "name" : "$BQ_DSNAME_SSCC0W",
+      "type" : "string",
+      "prompt" : "$BQ_DSNAME_SSCC0W",
+      "value" : "PROJDEF"
+    }, {
+      "name" : "$BQ_DSNAME_SSCC0D",
+      "type" : "string",
+      "prompt" : "$BQ_DSNAME_SSCC0D",
+      "value" : "PROJDEF"
+    }, {
+      "name" : "$BQ_PROJID_T4777A",
+      "type" : "string",
+      "prompt" : "$BQ_PROJID_T4777A",
+      "value" : "PROJDEF"
+    }, {
+      "name" : "$BQ_DSNAME_T4777A",
+      "type" : "string",
+      "prompt" : "$BQ_DSNAME_T4777A",
+      "value" : "PROJDEF"
+    } ]
+  }
+}

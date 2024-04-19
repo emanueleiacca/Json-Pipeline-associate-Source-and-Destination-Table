@@ -1,0 +1,32 @@
+DA READ A TRX PASSANDO PER LNKREAD_IN
+Node ID: 6a3bb4fd-f9f0-49a0-ba8f-1b4e3e5e8c93( ReadTd_TE_SC_RAI_MOVIMENTO_CSDR_TOP_TT) is the source of link ID: c74baf8f-41e9-4b9a-91e3-6dc31e2e5310
+Node ID: e2fdc67b-6a57-44f9-a9ee-4c6bc1efeb58 (Trx) is the target of link ID: c74baf8f-41e9-4b9a-91e3-6dc31e2e5310 from source node ID: 6a3bb4fd-f9f0-49a0-ba8f-1b4e3e5e8c93 (ReadTd_TE_SC_RAI_MOVIMENTO_CSDR_TOP_TT)
+
+DA  DISTINCT M3 A WriteTd_TW_SSC_RAI_OPERAZIONI_CSDR_TOP_TT_01_M3 PASSANDO PER LNK2ALLRECORDM3
+Node ID: 4ba7af48-03e2-439b-8857-4792808af3f9 (DISTINCT_M3) is the source of link ID: a4238120-abbd-429d-ae0c-677876143d84
+Node ID: 6daaf2d3-99de-434c-ad6a-d110a5bd9bf0 (WriteTd_TW_SSC_RAI_OPERAZIONI_CSDR_TOP_TT_01_M3) is the target of link ID: a4238120-abbd-429d-ae0c-677876143d84 from source node ID: 4ba7af48-03e2-439b-8857-4792808af3f9
+
+DA TRX A DISTINCT M3 PASSANDO PER LNK1ALLRECORDM3
+Node ID: e2fdc67b-6a57-44f9-a9ee-4c6bc1efeb58 (Trx) is the source of link ID: 3b0d0bbe-78e7-4489-98d9-47e17da5a70d
+Node ID: 4ba7af48-03e2-439b-8857-4792808af3f9 (DISTINCT_M3) is the target of link ID: 3b0d0bbe-78e7-4489-98d9-47e17da5a70d from source node ID: e2fdc67b-6a57-44f9-a9ee-4c6bc1efeb58
+
+DA TRX A DISTINCT M2 PASSANDO PER LNK1ALLRECORDM2
+Node ID: e2fdc67b-6a57-44f9-a9ee-4c6bc1efeb58 (Trx) is the source of link ID: 941c3d3a-b66b-4e97-ac6b-2c986a37d6c1
+Node ID: 1148a294-bac1-4f63-9c28-72be2c6c9cd7 (DISTINCT_M2) is the target of link ID: 941c3d3a-b66b-4e97-ac6b-2c986a37d6c1 from source node ID: e2fdc67b-6a57-44f9-a9ee-4c6bc1efeb58 (TRX)
+
+DA TRX A WriteTd_TW_SSC_RAI_OPERAZIONI_CSDR_TOP_TT_01_M1 PASSANDO PER LNK1ALLRECORDM1
+Node ID: e2fdc67b-6a57-44f9-a9ee-4c6bc1efeb58 (Trx) is the source of link ID: a2707dc5-44a5-4fa9-a526-855133d5b657
+Node ID: 077b99d5-b44f-4ad8-9444-d51213b01581 (WriteTd_TW_SSC_RAI_OPERAZIONI_CSDR_TOP_TT_01_M1) is the target of link ID: a2707dc5-44a5-4fa9-a526-855133d5b657 from source node ID: e2fdc67b-6a57-44f9-a9ee-4c6bc1efeb58 (TRX)
+
+DA DISTINCT M2  A WriteTd_TW_SSC_RAI_OPERAZIONI_CSDR_TOP_TT_01_M2 PASSANDO PER LNK2ALLRECORDM2
+Node ID: 1148a294-bac1-4f63-9c28-72be2c6c9cd7 (DISTINCT_M2) is the source of link ID: a17b1697-3542-420d-9086-498bcab56044
+Node ID: 2407e6da-7ecb-47e3-bb72-056e5f7e1272 (WriteTd_TW_SSC_RAI_OPERAZIONI_CSDR_TOP_TT_01_M2) is the target of link ID: a17b1697-3542-420d-9086-498bcab56044 from source node ID: 1148a294-bac1-4f63-9c28-72be2c6c9cd7 (DISTINCT_M2)
+
+
+  - Node ID: 6a3bb4fd-f9f0-49a0-ba8f-1b4e3e5e8c93, Label: ReadTd_TE_SC_RAI_MOVIMENTO_CSDR_TOP_TT
+  - Node ID: 4ba7af48-03e2-439b-8857-4792808af3f9, Label: DISTINCT_M3
+  - Node ID: 6daaf2d3-99de-434c-ad6a-d110a5bd9bf0, Label: WriteTd_TW_SSC_RAI_OPERAZIONI_CSDR_TOP_TT_01_M3
+  - Node ID: e2fdc67b-6a57-44f9-a9ee-4c6bc1efeb58, Label: Trx
+  - Node ID: 1148a294-bac1-4f63-9c28-72be2c6c9cd7, Label: DISTINCT_M2
+  - Node ID: 2407e6da-7ecb-47e3-bb72-056e5f7e1272, Label: WriteTd_TW_SSC_RAI_OPERAZIONI_CSDR_TOP_TT_01_M2
+  - Node ID: 077b99d5-b44f-4ad8-9444-d51213b01581, Label: WriteTd_TW_SSC_RAI_OPERAZIONI_CSDR_TOP_TT_01_M1

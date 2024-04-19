@@ -1,0 +1,2577 @@
+{
+  "primary_pipeline" : "ebaee612-5836-41eb-a8f8-df732f073524",
+  "pipelines" : [ {
+    "nodes" : [ {
+      "outputs" : [ {
+        "id" : "",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        }
+      } ],
+      "op" : "bigqueryPX",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "14ba53f7-2bfe-433c-acca-b729e5452291",
+          "type_attr" : "PRIMARY",
+          "id" : "108efc2e-a665-4811-bf62-a4c058c5ea16",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "path" : "M -15 -15 L -15 15 15 15 15 -15 Z",
+                "temporary" : false,
+                "distance" : -50,
+                "tooltip" : "Auto-partition",
+                "x_pos" : 5,
+                "id" : "dec-4",
+                "position" : "target"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/link-marking--auto-partitioning.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : -50,
+                "width" : 12,
+                "tooltip" : "Auto-partition",
+                "x_pos" : -2,
+                "id" : "dec-5",
+                "position" : "target",
+                "y_pos" : -6,
+                "height" : 12
+              }, {
+                "path" : "M -25 -20 L -25 20 25 20 25 -20 Z",
+                "temporary" : false,
+                "id" : "dec-7",
+                "position" : "middle",
+                "class_name" : "linkMiddleImage"
+              }, {
+                "temporary" : false,
+                "label_allow_return_key" : "save",
+                "label_single_line" : true,
+                "width" : 100,
+                "label_editable" : true,
+                "x_pos" : -20,
+                "id" : "dec-8",
+                "position" : "middle",
+                "label" : "To_tgt",
+                "y_pos" : -8,
+                "height" : 80
+              } ],
+              "class_name" : "undefined"
+            }
+          },
+          "link_name" : "To_tgt",
+          "port_id_ref" : "323582e3-a7ce-4706-9299-e92f1f02dbd2"
+        } ],
+        "id" : "6881324b-f7c5-4780-8a8b-960f0e2c55b2",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        },
+        "schema_ref" : "6850dc20-ad58-41ba-85ff-312ed85c8118",
+        "parameters" : {
+          "runtime_column_propagation" : 0
+        }
+      } ],
+      "connection" : {
+        "ref" : "be6708db-64dc-41da-b00f-8f2a3596c350",
+        "project_ref" : "39a75fb9-584b-4281-8f54-772fb337aaa0",
+        "properties" : {
+          "_java._heap_size" : 256,
+          "currentOutputLinkType" : "PRIMARY",
+          "before_after.after_node" : "",
+          "before_after.before_node.fail_on_error" : true,
+          "write_part_size" : "50",
+          "outputAcpShouldHide" : false,
+          "table_name" : "TW_SSC_RAI_SALDI_TITOLI_CAD_GG",
+          "before_after.before" : "TRUNCATE TABLE #$BQ_DSNAME_SSCC0W#.TW_SSC_RAI_SALDI_TITOLI_CAD_GG;",
+          "inputName" : "To_tgt",
+          "write_mode" : "merge",
+          "node_number" : 0,
+          "before_after.after" : "",
+          "node_count" : 1,
+          "table_action" : "append",
+          "registerDataAsset" : false,
+          "showPartType" : true,
+          "before_after.after_node.fail_on_error" : true,
+          "file_name" : "",
+          "showCollType" : false,
+          "before_after.before_node" : "",
+          "enableFlowAcpControl" : true,
+          "part_type" : "auto",
+          "schema_name" : "#$BQ_DSNAME_SSCC0W#",
+          "showSortOptions" : false,
+          "bucket" : "#$GCS_BUCKET_TMP#",
+          "before_after.before.fail_on_error" : true,
+          "before_after.after.fail_on_error" : true
+        },
+        "name" : "BQ_Connection_SSCC0"
+      },
+      "id" : "a3c1f015-a851-402b-a45f-b34188888a66",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/bigqueryPX.svg",
+          "x_pos" : 1116.72,
+          "label" : "WriteTd_TW_SSC_RAI_SALDI_TITOLI_CAD_GG",
+          "y_pos" : 380.16
+        }
+      },
+      "parameters" : {
+        "combinability" : "auto",
+        "inputcolProperties" : [ {
+          "Unicode" : false,
+          "TempOldColumnName" : "NUM_AA_MM_GG",
+          "ColumnName" : "NUM_AA_MM_GG",
+          "Length" : "–",
+          "Signed" : true,
+          "Metadata" : "INTEGER, Key, Null",
+          "DataType" : "INTEGER",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : true,
+          "Nullable" : true,
+          "OldColumnName" : "NUM_AA_MM_GG"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "COD_KEY_SALDI_TITOLI",
+          "ColumnName" : "COD_KEY_SALDI_TITOLI",
+          "Length" : 70,
+          "Signed" : false,
+          "Metadata" : "VARCHAR(70), Null",
+          "DataType" : "VARCHAR",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "COD_KEY_SALDI_TITOLI"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "COD_ABI",
+          "ColumnName" : "COD_ABI",
+          "Length" : 5,
+          "Signed" : false,
+          "Metadata" : "CHAR(5), Null",
+          "DataType" : "CHAR",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "COD_ABI"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "COD_AGENZIA",
+          "ColumnName" : "COD_AGENZIA",
+          "Length" : 5,
+          "Signed" : false,
+          "Metadata" : "CHAR(5), Null",
+          "DataType" : "CHAR",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "COD_AGENZIA"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "COD_DEPOSITO",
+          "ColumnName" : "COD_DEPOSITO",
+          "Length" : 11,
+          "Signed" : false,
+          "Metadata" : "CHAR(11), Null",
+          "DataType" : "CHAR",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "COD_DEPOSITO"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "COD_DIVISA",
+          "ColumnName" : "COD_DIVISA",
+          "Length" : 3,
+          "Signed" : false,
+          "Metadata" : "CHAR(3), Null",
+          "DataType" : "CHAR",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "COD_DIVISA"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "IMP_GIACENZA_CONTABILE",
+          "ColumnName" : "IMP_GIACENZA_CONTABILE",
+          "Length" : 18,
+          "Signed" : false,
+          "Metadata" : "DECIMAL(18, 3), Null",
+          "DataType" : "DECIMAL",
+          "Scale" : 3,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "IMP_GIACENZA_CONTABILE"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "NUM_ISTITUTO",
+          "ColumnName" : "NUM_ISTITUTO",
+          "Length" : "–",
+          "Signed" : true,
+          "Metadata" : "INTEGER, Null",
+          "DataType" : "INTEGER",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "NUM_ISTITUTO"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "IMP_MOLTIPLICATORE",
+          "ColumnName" : "IMP_MOLTIPLICATORE",
+          "Length" : 15,
+          "Signed" : false,
+          "Metadata" : "DECIMAL(15, 6), Null",
+          "DataType" : "DECIMAL",
+          "Scale" : 6,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "IMP_MOLTIPLICATORE"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "IMP_MOLTIPLICATORE_9_DECIMALI",
+          "ColumnName" : "IMP_MOLTIPLICATORE_9_DECIMALI",
+          "Length" : 18,
+          "Signed" : false,
+          "Metadata" : "DECIMAL(18, 9), Null",
+          "DataType" : "DECIMAL",
+          "Scale" : 9,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "IMP_MOLTIPLICATORE_9_DECIMALI"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "DAT_RIFERIMENTO",
+          "ColumnName" : "DAT_RIFERIMENTO",
+          "Length" : "–",
+          "Signed" : false,
+          "Metadata" : "DATE, Null",
+          "DataType" : "DATE",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "DAT_RIFERIMENTO"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "IMP_SALDO_TITOLO_CONTROVALORE",
+          "ColumnName" : "IMP_SALDO_TITOLO_CONTROVALORE",
+          "Length" : 18,
+          "Signed" : false,
+          "Metadata" : "DECIMAL(18, 3), Null",
+          "DataType" : "DECIMAL",
+          "Scale" : 3,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "IMP_SALDO_TITOLO_CONTROVALORE"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "IMP_SALDO_TITOLO_DIVISA",
+          "ColumnName" : "IMP_SALDO_TITOLO_DIVISA",
+          "Length" : 18,
+          "Signed" : false,
+          "Metadata" : "DECIMAL(18, 2), Null",
+          "DataType" : "DECIMAL",
+          "Scale" : 2,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "IMP_SALDO_TITOLO_DIVISA"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "COD_SOTTODEPOSITO",
+          "ColumnName" : "COD_SOTTODEPOSITO",
+          "Length" : 5,
+          "Signed" : false,
+          "Metadata" : "CHAR(5), Null",
+          "DataType" : "CHAR",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "COD_SOTTODEPOSITO"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "COD_TITOLO",
+          "ColumnName" : "COD_TITOLO",
+          "Length" : 11,
+          "Signed" : false,
+          "Metadata" : "CHAR(11), Null",
+          "DataType" : "CHAR",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "COD_TITOLO"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "COD_UO",
+          "ColumnName" : "COD_UO",
+          "Length" : 5,
+          "Signed" : false,
+          "Metadata" : "CHAR(5), Null",
+          "DataType" : "CHAR",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "COD_UO"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "COD_CHIAVE_DQ",
+          "ColumnName" : "COD_CHIAVE_DQ",
+          "Length" : 100,
+          "Signed" : false,
+          "Metadata" : "VARCHAR(100), Null",
+          "DataType" : "VARCHAR",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "COD_CHIAVE_DQ"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "COD_SIST_ALIMNTNT",
+          "ColumnName" : "COD_SIST_ALIMNTNT",
+          "Length" : 3,
+          "Signed" : false,
+          "Metadata" : "CHAR(3), Null",
+          "DataType" : "CHAR",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "COD_SIST_ALIMNTNT"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "COD_SSA_PROVNNZ",
+          "ColumnName" : "COD_SSA_PROVNNZ",
+          "Length" : 10,
+          "Signed" : false,
+          "Metadata" : "VARCHAR(10), Null",
+          "DataType" : "VARCHAR",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "COD_SSA_PROVNNZ"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "IMP_GIACENZA_REGISTRAZIONE",
+          "ColumnName" : "IMP_GIACENZA_REGISTRAZIONE",
+          "Length" : 18,
+          "Signed" : false,
+          "Metadata" : "DECIMAL(18, 3), Null",
+          "DataType" : "DECIMAL",
+          "Scale" : 3,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "IMP_GIACENZA_REGISTRAZIONE"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "IMP_GIACENZA_VALUTA",
+          "ColumnName" : "IMP_GIACENZA_VALUTA",
+          "Length" : 18,
+          "Signed" : false,
+          "Metadata" : "DECIMAL(18, 3), Null",
+          "DataType" : "DECIMAL",
+          "Scale" : 3,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "IMP_GIACENZA_VALUTA"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "FLG_CHK_NUL",
+          "ColumnName" : "FLG_CHK_NUL",
+          "Length" : "–",
+          "Signed" : true,
+          "Metadata" : "SMALLINT, Null",
+          "DataType" : "SMALLINT",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "FLG_CHK_NUL"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "FLG_CHK_DUP",
+          "ColumnName" : "FLG_CHK_DUP",
+          "Length" : "–",
+          "Signed" : true,
+          "Metadata" : "SMALLINT, Null",
+          "DataType" : "SMALLINT",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "FLG_CHK_DUP"
+        }, {
+          "Unicode" : false,
+          "TempOldColumnName" : "FLG_CHK_FOR",
+          "ColumnName" : "FLG_CHK_FOR",
+          "Length" : "–",
+          "Signed" : true,
+          "Metadata" : "SMALLINT, Null",
+          "DataType" : "SMALLINT",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "Key" : false,
+          "Nullable" : true,
+          "OldColumnName" : "FLG_CHK_FOR"
+        } ],
+        "output_count" : 0,
+        "input_count" : 1,
+        "execmode" : "default_par",
+        "allow_column_mapping" : false
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "323582e3-a7ce-4706-9299-e92f1f02dbd2",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "108efc2e-a665-4811-bf62-a4c058c5ea16"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 2147483647
+            }
+          },
+          "additionalProperties" : {
+            "enableAcp" : true
+          }
+        },
+        "schema_ref" : "6850dc20-ad58-41ba-85ff-312ed85c8118",
+        "parameters" : {
+          "Reject" : false,
+          "outputName" : "To_tgt",
+          "RowLimit" : 0,
+          "valueDerivation" : [ {
+            "parsedExpression" : "If (NullToValue(Lnk_trns.COD_ENTITA,\"\") = '1') Then ((Lnk_trns.IMP_GIACENZA_CONTABILE * Lnk_trns.IMP_MOLTIPLICATORE) / 100) \nElse If (NullToValue(Lnk_trns.COD_ENTITA,\"\") = '12' AND Lnk_trns.COD_DIVISA <> 'EUR') Then (If (Lnk_trns.IMP_MOLTIPLICATORE_9_DECIMALI = StringToDecimal('0.000000000')) Then StringToDecimal('0.00') \nElse Lnk_trns.IMP_SALDO_TITOLO_CONTROVALORE / Lnk_trns.IMP_MOLTIPLICATORE_9_DECIMALI) \nElse If (NullToValue(Lnk_trns.COD_ENTITA,\"\") = '12' AND Lnk_trns.COD_DIVISA = 'EUR') Then Lnk_trns.IMP_SALDO_TITOLO_CONTROVALORE\nElse If (NullToValue(Lnk_trns.COD_ENTITA,\"\") <> '1' AND NullToValue(Lnk_trns.COD_ENTITA,\"\") <> '12') Then (Lnk_trns.IMP_GIACENZA_CONTABILE * Lnk_trns.IMP_MOLTIPLICATORE) Else SetNull()",
+            "columnName" : "IMP_SALDO_TITOLO_DIVISA"
+          }, {
+            "parsedExpression" : "CheckNULL",
+            "stageVars" : "CheckNULL",
+            "columnName" : "FLG_CHK_NUL"
+          }, {
+            "parsedExpression" : "CheckNULL",
+            "stageVars" : "CheckNULL",
+            "columnName" : "FLG_CHK_DUP"
+          }, {
+            "parsedExpression" : "CheckNULL",
+            "stageVars" : "CheckNULL",
+            "columnName" : "FLG_CHK_FOR"
+          } ],
+          "buf_mode" : "default",
+          "runtime_column_propagation" : false
+        }
+      } ],
+      "op" : "CTransformerStage",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "54429447-663b-461b-bada-4a41bf83c378",
+          "type_attr" : "PRIMARY",
+          "id" : "9fc70a1e-e0be-4c5f-badf-9afe81edb012",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "path" : "M -15 -15 L -15 15 15 15 15 -15 Z",
+                "temporary" : false,
+                "distance" : -50,
+                "tooltip" : "Auto-partition",
+                "x_pos" : 5,
+                "id" : "dec-4",
+                "position" : "target"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/link-marking--auto-partitioning.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : -50,
+                "width" : 12,
+                "tooltip" : "Auto-partition",
+                "x_pos" : -2,
+                "id" : "dec-5",
+                "position" : "target",
+                "y_pos" : -6,
+                "height" : 12
+              }, {
+                "path" : "M -25 -20 L -25 20 25 20 25 -20 Z",
+                "temporary" : false,
+                "id" : "dec-7",
+                "position" : "middle",
+                "class_name" : "linkMiddleImage"
+              }, {
+                "temporary" : false,
+                "label_allow_return_key" : "save",
+                "label_single_line" : true,
+                "width" : 100,
+                "label_editable" : true,
+                "x_pos" : -20,
+                "id" : "dec-8",
+                "position" : "middle",
+                "label" : "Lnk_trns",
+                "y_pos" : -8,
+                "height" : 80
+              } ],
+              "class_name" : "undefined"
+            }
+          },
+          "link_name" : "Lnk_trns",
+          "port_id_ref" : "a0839792-b0ba-4dcd-8adb-1ba40b416a72"
+        } ],
+        "id" : "d6644f6b-4d8b-49ca-8306-cd566c6b60d5",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "schema_ref" : "f24a51a2-30a4-4f97-9ed7-b1f8e8604f54",
+        "parameters" : {
+          "keyColsPart" : [ ],
+          "perform_sort" : false,
+          "part_coll" : "part_type",
+          "runtime_column_propagation" : 0
+        }
+      } ],
+      "id" : "14ba53f7-2bfe-433c-acca-b729e5452291",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "d6644f6b-4d8b-49ca-8306-cd566c6b60d5",
+          "outputs_order" : "323582e3-a7ce-4706-9299-e92f1f02dbd2"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/CTransformerStage.svg",
+          "x_pos" : 855.36,
+          "label" : "Trns",
+          "y_pos" : 380.16
+        }
+      },
+      "parameters" : {
+        "MaxLoopIterations" : 0,
+        "output_count" : 1,
+        "BlockSizeSelectedType" : "systemSelected",
+        "StageVariables" : [ {
+          "Precision" : 255,
+          "Derivation" : "IF INDEX(Lnk_trns.COD_CHIAVE_DQ,'NULL',1) > 0 THEN sETnULL() ELSE 0",
+          "SqlType" : "VARCHAR",
+          "Name" : "CheckNULL"
+        } ],
+        "input_count" : 1,
+        "Triggers" : [ ],
+        "LoopVariables" : [ ],
+        "SKKeySourceType" : "file",
+        "runtime_column_propagation" : false
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "a0839792-b0ba-4dcd-8adb-1ba40b416a72",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "9fc70a1e-e0be-4c5f-badf-9afe81edb012"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "schema_ref" : "f24a51a2-30a4-4f97-9ed7-b1f8e8604f54",
+        "parameters" : {
+          "buf_free_run" : 50,
+          "queue_upper_size" : 0,
+          "max_mem_buf_size" : 3145728,
+          "disk_write_inc" : 1048576
+        }
+      } ],
+      "op" : "PxJoin",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "38279295-961c-4a68-8c4b-fbf378d39b79",
+          "type_attr" : "PRIMARY",
+          "id" : "3b600c45-e9d0-4f87-b30e-4b2030ef3762",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "path" : "M -15 -15 L -15 15 15 15 15 -15 Z",
+                "temporary" : false,
+                "distance" : -50,
+                "tooltip" : "Repartition",
+                "x_pos" : 5,
+                "id" : "dec-4",
+                "position" : "target"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/link-marking--repartitioning.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : -50,
+                "width" : 12,
+                "tooltip" : "Repartition",
+                "x_pos" : -2,
+                "id" : "dec-5",
+                "position" : "target",
+                "y_pos" : -6,
+                "height" : 12
+              }, {
+                "path" : "M -25 -20 L -25 20 25 20 25 -20 Z",
+                "temporary" : false,
+                "id" : "dec-7",
+                "position" : "middle",
+                "class_name" : "linkMiddleImage"
+              }, {
+                "temporary" : false,
+                "label_allow_return_key" : "save",
+                "label_single_line" : true,
+                "width" : 100,
+                "label_editable" : true,
+                "x_pos" : -20,
+                "id" : "dec-8",
+                "position" : "middle",
+                "label" : "Lnk_Master",
+                "y_pos" : -8,
+                "height" : 80
+              } ],
+              "class_name" : "undefined"
+            }
+          },
+          "link_name" : "Lnk_Master",
+          "port_id_ref" : "0a90bf48-adb4-44a3-9874-89d55405f7c7"
+        } ],
+        "id" : "954d3d12-3f36-4e22-9649-86f85e5cd0c3",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 2,
+              "max" : 2147483646
+            }
+          }
+        },
+        "schema_ref" : "20567758-ca10-4923-b6dc-f619002c787c",
+        "parameters" : {
+          "keyColsPart" : [ {
+            "ci-cs" : "cs",
+            "sorting" : true,
+            "nulls" : "first",
+            "partitioning" : true,
+            "asc-desc" : "asc",
+            "keyCol" : "COD_ABI"
+          }, {
+            "ci-cs" : "cs",
+            "sorting" : true,
+            "nulls" : "first",
+            "partitioning" : true,
+            "asc-desc" : "asc",
+            "keyCol" : "COD_TITOLO"
+          }, {
+            "sorting" : true,
+            "nulls" : "first",
+            "partitioning" : true,
+            "asc-desc" : "asc",
+            "keyCol" : "NUM_ISTITUTO"
+          } ],
+          "part_stable" : true,
+          "part_unique" : false,
+          "perform_sort" : true,
+          "part_type" : "hash",
+          "part_coll_sort_columns" : "COD_ABI,COD_TITOLO,NUM_ISTITUTO",
+          "part_coll" : "part_type",
+          "runtime_column_propagation" : 0
+        }
+      }, {
+        "links" : [ {
+          "node_id_ref" : "df6d5648-8125-4603-9dc1-259fd6d0a31c",
+          "type_attr" : "PRIMARY",
+          "id" : "02626231-39fa-49e2-9a65-70b1a898a17b",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "path" : "M -15 -15 L -15 15 15 15 15 -15 Z",
+                "temporary" : false,
+                "distance" : -50,
+                "tooltip" : "Repartition",
+                "x_pos" : 5,
+                "id" : "dec-4",
+                "position" : "target"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/link-marking--repartitioning.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : -50,
+                "width" : 12,
+                "tooltip" : "Repartition",
+                "x_pos" : -2,
+                "id" : "dec-5",
+                "position" : "target",
+                "y_pos" : -6,
+                "height" : 12
+              }, {
+                "path" : "M -25 -20 L -25 20 25 20 25 -20 Z",
+                "temporary" : false,
+                "id" : "dec-7",
+                "position" : "middle",
+                "class_name" : "linkMiddleImage"
+              }, {
+                "temporary" : false,
+                "label_allow_return_key" : "save",
+                "label_single_line" : true,
+                "width" : 100,
+                "label_editable" : true,
+                "x_pos" : -20,
+                "id" : "dec-8",
+                "position" : "middle",
+                "label" : "Lnk_SL2",
+                "y_pos" : -8,
+                "height" : 80
+              } ],
+              "class_name" : "undefined"
+            }
+          },
+          "link_name" : "Lnk_SL2",
+          "port_id_ref" : "bd88004f-135f-4f9e-88f4-3ac082b93d26"
+        } ],
+        "id" : "bd2d6ff5-5a8d-4dcf-b49d-f66e816108de",
+        "app_data" : {
+          "datastage" : { },
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 2,
+              "max" : 2147483646
+            }
+          }
+        },
+        "schema_ref" : "cdee7eb3-b4a2-443c-9f60-b72ac5868a0c",
+        "parameters" : {
+          "keyColsPart" : [ {
+            "ci-cs" : "cs",
+            "sorting" : true,
+            "partitioning" : true,
+            "asc-desc" : "asc",
+            "keyCol" : "COD_ABI"
+          }, {
+            "ci-cs" : "cs",
+            "sorting" : true,
+            "partitioning" : true,
+            "asc-desc" : "asc",
+            "keyCol" : "COD_TITOLO"
+          }, {
+            "sorting" : true,
+            "partitioning" : true,
+            "asc-desc" : "asc",
+            "keyCol" : "NUM_ISTITUTO"
+          } ],
+          "part_stable" : true,
+          "part_unique" : false,
+          "perform_sort" : true,
+          "part_type" : "hash",
+          "part_coll_sort_columns" : "COD_ABI,COD_TITOLO,NUM_ISTITUTO",
+          "part_coll" : "part_type",
+          "runtime_column_propagation" : 0
+        }
+      } ],
+      "id" : "54429447-663b-461b-bada-4a41bf83c378",
+      "type" : "execution_node",
+      "app_data" : {
+        "datastage" : {
+          "inputs_order" : "954d3d12-3f36-4e22-9649-86f85e5cd0c3|bd2d6ff5-5a8d-4dcf-b49d-f66e816108de",
+          "outputs_order" : "a0839792-b0ba-4dcd-8adb-1ba40b416a72"
+        },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxJoin.svg",
+          "x_pos" : 617.76,
+          "label" : "Join_75",
+          "y_pos" : 380.16
+        }
+      },
+      "parameters" : {
+        "keyProperties" : [ {
+          "key" : "COD_ABI"
+        }, {
+          "key" : "COD_TITOLO"
+        }, {
+          "key" : "NUM_ISTITUTO"
+        } ],
+        "output_count" : 1,
+        "input_count" : 2,
+        "allow_column_mapping" : false,
+        "operator" : "leftouterjoin"
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "0a90bf48-adb4-44a3-9874-89d55405f7c7",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "3b600c45-e9d0-4f87-b30e-4b2030ef3762"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          },
+          "additionalProperties" : {
+            "enableAcp" : true
+          }
+        },
+        "schema_ref" : "20567758-ca10-4923-b6dc-f619002c787c",
+        "parameters" : {
+          "buf_free_run" : 50,
+          "buf_mode" : "default",
+          "queue_upper_size" : 0,
+          "max_mem_buf_size" : 3145728,
+          "disk_write_inc" : 1048576
+        }
+      } ],
+      "op" : "bigqueryPX",
+      "connection" : {
+        "ref" : "be6708db-64dc-41da-b00f-8f2a3596c350",
+        "project_ref" : "39a75fb9-584b-4281-8f54-772fb337aaa0",
+        "properties" : {
+          "_java._heap_size" : 256,
+          "currentOutputLinkType" : "PRIMARY",
+          "before_after.after_node" : "",
+          "before_after.before_node.fail_on_error" : true,
+          "before_after.after_node.fail_on_error" : true,
+          "outputAcpShouldHide" : true,
+          "partitioned" : false,
+          "before_after.before_node" : "",
+          "enableFlowAcpControl" : true,
+          "select_statement" : "SELECT\n    NUM_AA_MM_GG AS num_aa_mm_gg,\n    COD_KEY_SALDI_TITOLI AS cod_key_saldi_titoli,\n    M.COD_ABI AS cod_abi,\n    M.COD_AGENZIA AS cod_agenzia,\n    M.COD_DEPOSITO AS cod_deposito,\n    M.COD_DIVISA AS cod_divisa,\n    M.IMP_GIACENZA_CONTABILE AS imp_giacenza_contabile,\n    M.NUM_ISTITUTO AS num_istituto,\n    M.IMP_MOLTIPLICATORE AS imp_moltiplicatore,\n    M.IMP_MOLTIPLICATORE_9_DEC AS imp_moltiplicatore_9_decimali,\n    M.DAT_RIFERIMENTO AS dat_riferimento,\n    M.IMP_CONTROVALORE_IN_EURO AS imp_saldo_titolo_controvalore,\n    M.COD_SOTTODEPOSITO AS cod_sottodeposito,\n    M.COD_TITOLO AS cod_titolo,\n    M.COD_FILIALE AS cod_uo,\n    substr(concat(substr(trim(format('%11d', NUM_AA_MM_GG)), 1, 8), '|', trim(coalesce(COD_KEY_SALDI_TITOLI, 'NULL'))), 1, 100) AS cod_chiave_dq,\n    substr(concat('#COD_SIST_ALIMNTNT#', '   '), 1, 3) AS cod_sist_alimntnt,\n    substr('#COD_SSA_PROVNNZ#', 1, 10) AS cod_ssa_provnnz,\n    M.IMP_GIACENZA_REGISTRAZIONE,\n    M.IMP_GIACENZA_VALUTA\n  FROM\n    #$BQ_PROJID_A1777A#.#$BQ_DSNAME_A1777A#.VE_A1_HD_ARCH_DATA_HOU_SAL_GG_ON AS M\n    INNER JOIN #$BQ_PROJID_SSC0#.#$BQ_DSNAME_SSCC0D#.V_VE_SC_GEN_CONST_SSA AS B ON upper(rtrim(B.NOM_VISTA)) = 'VE_A1_HD_ARCH_DATA_HOU_SAL_GG_ON'\n     AND upper(rtrim(B.COD_PERIODICITA)) = 'G'\n     AND B.NUM_PERIOD_RIF = CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(left('#TMS_CARICAMENTO#', 8)) as INT64)\n     AND (upper(rtrim(B.COD_ABI)) = 'MULTI'\n     AND 1 = 1\n     OR upper(rtrim(B.COD_ABI)) <> 'MULTI'\n     AND upper(rtrim(M.COD_ABI)) = upper(rtrim(B.COD_ABI)))\n     AND B.TMS_PDC BETWEEN M.TMS_INIZIO_VALIDITA AND M.TMS_FINE_VALIDITA\n    LEFT OUTER JOIN #$BQ_PROJID_SSC0#.#$BQ_DSNAME_SSCC0D#.V_VD_SC_GEN_ABI AS SL1 ON upper(rtrim(M.COD_ABI)) = upper(rtrim(SL1.COD_ABI))\n     AND M.NUM_ISTITUTO = CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(SL1.COD_CONTST) as INT64)\n     AND SL1.DAT_FIN_ATTVT_ABI < date_add(parse_date('%Y%m%d', substr(SSCC0D.CW_TD_NORMALIZE_NUMBER(left('#TMS_CARICAMENTO#', 8)), 1, 8)), interval -2 MONTH)\n    CROSS JOIN UNNEST(ARRAY[\n      CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(substr('#TMS_CARICAMENTO#', 1, 8)) as INT64)\n    ]) AS num_aa_mm_gg\n    CROSS JOIN UNNEST(ARRAY[\n      substr(concat(trim('#COD_SIST_ALIMNTNT#'), '-', trim(M.COD_ABI), '-', trim(substr(CAST(M.NUM_ISTITUTO as STRING), 1, 5)), '-', trim(M.COD_AGENZIA), '-', trim(M.COD_FILIALE), '-', trim(M.COD_DEPOSITO), '-', trim(M.COD_SOTTODEPOSITO), '-', trim(M.COD_TITOLO), '-', trim(M.COD_DIVISA)), 1, 70)\n    ]) AS cod_key_saldi_titoli\n  WHERE M.DAT_RIFERIMENTO = parse_date('%Y%m%d', substr('#TMS_CARICAMENTO#', 1, 8))\n   AND M.FLG_RIFACIMENTO = 0\n   AND M.TMS_CANC_FISICA IS NULL\n   AND SL1.COD_ABI IS NULL;",
+          "enableSchemalessDesign" : false,
+          "before_after.before" : "",
+          "before_after.before.fail_on_error" : true,
+          "node_number" : 0,
+          "read_mode" : "select",
+          "generate_unicode_columns" : false,
+          "before_after.after" : "",
+          "node_count" : 1,
+          "before_after.after.fail_on_error" : true,
+          "use_gcs_staging" : false
+        },
+        "name" : "BQ_Connection_SSCC0"
+      },
+      "id" : "38279295-961c-4a68-8c4b-fbf378d39b79",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/bigqueryPX.svg",
+          "x_pos" : 356.40000000000003,
+          "label" : "ReadTd_TW_VE_A1_HD_ARCH_DATA_HOU_SAL_ON_GG_DMP",
+          "y_pos" : 380.16
+        }
+      },
+      "parameters" : {
+        "combinability" : "auto",
+        "output_count" : 1,
+        "input_count" : 0,
+        "execmode" : "default_par",
+        "preserve" : -3,
+        "allow_column_mapping" : false
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "bd88004f-135f-4f9e-88f4-3ac082b93d26",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "02626231-39fa-49e2-9a65-70b1a898a17b"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          },
+          "additionalProperties" : {
+            "enableAcp" : true
+          }
+        },
+        "schema_ref" : "cdee7eb3-b4a2-443c-9f60-b72ac5868a0c",
+        "parameters" : {
+          "buf_free_run" : 50,
+          "buf_mode" : "default",
+          "queue_upper_size" : 0,
+          "max_mem_buf_size" : 3145728,
+          "disk_write_inc" : 1048576
+        }
+      } ],
+      "op" : "bigqueryPX",
+      "connection" : {
+        "ref" : "be6708db-64dc-41da-b00f-8f2a3596c350",
+        "project_ref" : "39a75fb9-584b-4281-8f54-772fb337aaa0",
+        "properties" : {
+          "_java._heap_size" : 256,
+          "currentOutputLinkType" : "PRIMARY",
+          "before_after.after_node" : "",
+          "before_after.before_node.fail_on_error" : true,
+          "before_after.after_node.fail_on_error" : true,
+          "outputAcpShouldHide" : true,
+          "partitioned" : false,
+          "before_after.before_node" : "",
+          "enableFlowAcpControl" : true,
+          "select_statement" : "SELECT\n    SL2.COD_ABI,\n    SL2.NUM_ISTITUTO,\n    SL2.COD_TITOLO,\n    substr(coalesce(trim(SL2.COD_ENTITA), ''), 1, 5) AS cod_entita\n  FROM\n    #$BQ_PROJID_A1777A#.#$BQ_DSNAME_A1777A#.VA_A1_HD_ARCHIV_ANAGRA_TITOLI_ON AS SL2\n    INNER JOIN #$BQ_PROJID_SSC0#.#$BQ_DSNAME_SSCC0D#.V_VE_SC_GEN_CONST_SSA AS B ON upper(rtrim(B.NOM_VISTA)) = 'VA_A1_HD_ARCHIV_ANAGRA_TITOLI_ON'\n     AND upper(rtrim(B.COD_PERIODICITA)) = 'G'\n     AND B.NUM_PERIOD_RIF = CAST(SSCC0D.CW_TD_NORMALIZE_NUMBER(left('#TMS_CARICAMENTO#', 8)) as INT64)\n     AND (upper(rtrim(B.COD_ABI)) = 'MULTI'\n     AND 1 = 1\n     OR upper(rtrim(B.COD_ABI)) <> 'MULTI'\n     AND upper(rtrim(SL2.COD_ABI)) = upper(rtrim(B.COD_ABI)))\n     AND B.TMS_PDC BETWEEN SL2.TMS_INIZIO_VALIDITA AND SL2.TMS_FINE_VALIDITA\n  WHERE SL2.FLG_RIFACIMENTO = 0\n   AND SL2.TMS_CANC_FISICA IS NULL\n   AND upper(trim(SL2.COD_VERSIONE)) = '0';",
+          "enableSchemalessDesign" : false,
+          "before_after.before" : "",
+          "before_after.before.fail_on_error" : true,
+          "node_number" : 0,
+          "read_mode" : "select",
+          "generate_unicode_columns" : false,
+          "before_after.after" : "",
+          "node_count" : 1,
+          "before_after.after.fail_on_error" : true,
+          "use_gcs_staging" : false
+        },
+        "name" : "BQ_Connection_SSCC0"
+      },
+      "id" : "df6d5648-8125-4603-9dc1-259fd6d0a31c",
+      "type" : "binding",
+      "app_data" : {
+        "datastage" : { },
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/bigqueryPX.svg",
+          "x_pos" : 617.76,
+          "label" : "ReadTd_TW_VA_A1_HD_ARCHIV_ANAGRA_TITOLI_BASE_ON_GG_DMP",
+          "y_pos" : 570.24
+        }
+      },
+      "parameters" : {
+        "combinability" : "auto",
+        "output_count" : 1,
+        "input_count" : 0,
+        "execmode" : "default_par",
+        "preserve" : -3,
+        "allow_column_mapping" : false
+      }
+    } ],
+    "description" : "Short description: Popolamento TW_SSC_RAI_SALDI_TITOLI_CAD_GG. Long description: Popolamento TW_SSC_RAI_SALDI_TITOLI_CAD_GG\r\nEstrazione dei dati dalle tabelle:\r\nTW_VE_A1_HD_ARCH_DATA_HOU_SAL_GG_ON_GG_DMP\r\nTabella di Work popolata:\r\nTW_SSC_RAI_SALDI_TITOLI_CAD_GG\r\n-------------------------------------------------------------------------------------------------------------------------------\r\nElenco modifiche Job:\r\n20220502 - GFT: Scrittura Versione 1.0",
+    "id" : "ebaee612-5836-41eb-a8f8-df732f073524",
+    "app_data" : {
+      "datastage" : {
+        "nls_map_name" : "",
+        "runtime_column_propagation" : "false",
+        "nls_locale" : "OFF"
+      },
+      "ui_data" : {
+        "comments" : [ {
+          "associated_id_refs" : [ ],
+          "width" : 385,
+          "x_pos" : 47.52,
+          "id" : "f5552851-8100-4a35-a5ef-bc5063f91b73",
+          "y_pos" : 47.52,
+          "class_name" : "d3-comment-rect",
+          "content" : "Popolamento TW_SSC_RAI_SALDI_TITOLI_CAD_GG\r\nEstrazione dei dati dalle tabelle:\r\nTW_VE_A1_HD_ARCH_DATA_HOU_SAL_GG_ON_GG_DMP\r\nTabella di Work popolata:\r\nTW_SSC_RAI_SALDI_TITOLI_CAD_GG\r\n-------------------------------------------------------------------------------------------------------------------------------\r\nElenco modifiche Job:\r\n20220502 - GFT: Scrittura Versione 1.0",
+          "height" : 249
+        } ]
+      }
+    },
+    "runtime_ref" : "pxOsh"
+  } ],
+  "runtimes" : [ {
+    "name" : "pxOsh",
+    "id" : "pxOsh"
+  } ],
+  "external_paramsets" : [ ],
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "schemas" : [ {
+    "id" : "6850dc20-ad58-41ba-85ff-312ed85c8118",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 6,
+        "source_field_id" : "Lnk_trns.NUM_AA_MM_GG",
+        "max_length" : 6,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "NUM_AA_MM_GG",
+      "type" : "integer",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_trns.COD_KEY_SALDI_TITOLI",
+        "max_length" : 70,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_KEY_SALDI_TITOLI",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 5,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_trns.COD_ABI",
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_ABI",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 5,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_trns.COD_AGENZIA",
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_AGENZIA",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 11,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_trns.COD_DEPOSITO",
+        "max_length" : 11,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_DEPOSITO",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 3,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_trns.COD_DIVISA",
+        "max_length" : 3,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_DIVISA",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 3,
+        "decimal_precision" : 18,
+        "source_field_id" : "Lnk_trns.IMP_GIACENZA_CONTABILE",
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_GIACENZA_CONTABILE",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 6,
+        "source_field_id" : "Lnk_trns.NUM_ISTITUTO",
+        "max_length" : 6,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "NUM_ISTITUTO",
+      "type" : "integer",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 6,
+        "decimal_precision" : 15,
+        "source_field_id" : "Lnk_trns.IMP_MOLTIPLICATORE",
+        "max_length" : 15,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_MOLTIPLICATORE",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 9,
+        "decimal_precision" : 18,
+        "source_field_id" : "Lnk_trns.IMP_MOLTIPLICATORE_9_DECIMALI",
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_MOLTIPLICATORE_9_DECIMALI",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 10,
+        "source_field_id" : "Lnk_trns.DAT_RIFERIMENTO",
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "DAT_RIFERIMENTO",
+      "type" : "date",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DATE",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DATE"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 3,
+        "decimal_precision" : 18,
+        "source_field_id" : "Lnk_trns.IMP_SALDO_TITOLO_CONTROVALORE",
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_SALDO_TITOLO_CONTROVALORE",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 2,
+        "decimal_precision" : 18,
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_SALDO_TITOLO_DIVISA",
+      "type" : "double",
+      "app_data" : {
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 5,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_trns.COD_SOTTODEPOSITO",
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_SOTTODEPOSITO",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 11,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_trns.COD_TITOLO",
+        "max_length" : 11,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_TITOLO",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 5,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_trns.COD_UO",
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_UO",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_trns.COD_CHIAVE_DQ",
+        "max_length" : 100,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_CHIAVE_DQ",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 3,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_trns.COD_SIST_ALIMNTNT",
+        "max_length" : 3,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_SIST_ALIMNTNT",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_trns.COD_SSA_PROVNNZ",
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_SSA_PROVNNZ",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 3,
+        "decimal_precision" : 18,
+        "source_field_id" : "Lnk_trns.IMP_GIACENZA_REGISTRAZIONE",
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_GIACENZA_REGISTRAZIONE",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 3,
+        "decimal_precision" : 18,
+        "source_field_id" : "Lnk_trns.IMP_GIACENZA_VALUTA",
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_GIACENZA_VALUTA",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 6,
+        "max_length" : 6,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "FLG_CHK_NUL",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "SMALLINT",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT16"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 6,
+        "max_length" : 6,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "FLG_CHK_DUP",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "SMALLINT",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT16"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 6,
+        "max_length" : 6,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "FLG_CHK_FOR",
+      "type" : "integer",
+      "app_data" : {
+        "odbc_type" : "SMALLINT",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT16"
+      }
+    } ]
+  }, {
+    "id" : "f24a51a2-30a4-4f97-9ed7-b1f8e8604f54",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 5,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_Master.COD_ABI",
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_ABI",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 6,
+        "source_field_id" : "Lnk_Master.NUM_ISTITUTO",
+        "max_length" : 6,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "NUM_ISTITUTO",
+      "type" : "integer",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 11,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_Master.COD_TITOLO",
+        "max_length" : 11,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_TITOLO",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 6,
+        "source_field_id" : "Lnk_Master.NUM_AA_MM_GG",
+        "max_length" : 6,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "NUM_AA_MM_GG",
+      "type" : "integer",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_Master.COD_KEY_SALDI_TITOLI",
+        "max_length" : 70,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_KEY_SALDI_TITOLI",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 5,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_Master.COD_AGENZIA",
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_AGENZIA",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 11,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_Master.COD_DEPOSITO",
+        "max_length" : 11,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_DEPOSITO",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 3,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_Master.COD_DIVISA",
+        "max_length" : 3,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_DIVISA",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 3,
+        "decimal_precision" : 18,
+        "source_field_id" : "Lnk_Master.IMP_GIACENZA_CONTABILE",
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_GIACENZA_CONTABILE",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 6,
+        "decimal_precision" : 15,
+        "source_field_id" : "Lnk_Master.IMP_MOLTIPLICATORE",
+        "max_length" : 15,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_MOLTIPLICATORE",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 9,
+        "decimal_precision" : 18,
+        "source_field_id" : "Lnk_Master.IMP_MOLTIPLICATORE_9_DECIMALI",
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_MOLTIPLICATORE_9_DECIMALI",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 10,
+        "source_field_id" : "Lnk_Master.DAT_RIFERIMENTO",
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "DAT_RIFERIMENTO",
+      "type" : "date",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DATE",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DATE"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 3,
+        "decimal_precision" : 18,
+        "source_field_id" : "Lnk_Master.IMP_SALDO_TITOLO_CONTROVALORE",
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_SALDO_TITOLO_CONTROVALORE",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 5,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_Master.COD_SOTTODEPOSITO",
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_SOTTODEPOSITO",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 5,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_Master.COD_UO",
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_UO",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_Master.COD_CHIAVE_DQ",
+        "max_length" : 100,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_CHIAVE_DQ",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 3,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_Master.COD_SIST_ALIMNTNT",
+        "max_length" : 3,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_SIST_ALIMNTNT",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_Master.COD_SSA_PROVNNZ",
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_SSA_PROVNNZ",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 3,
+        "decimal_precision" : 18,
+        "source_field_id" : "Lnk_Master.IMP_GIACENZA_REGISTRAZIONE",
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_GIACENZA_REGISTRAZIONE",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 3,
+        "decimal_precision" : 18,
+        "source_field_id" : "Lnk_Master.IMP_GIACENZA_VALUTA",
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_GIACENZA_VALUTA",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "source_field_id" : "Lnk_SL2.COD_ENTITA",
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_ENTITA",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    } ]
+  }, {
+    "id" : "20567758-ca10-4923-b6dc-f619002c787c",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "NUM_AA_MM_GG",
+      "type" : "integer",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 70,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_KEY_SALDI_TITOLI",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 5,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_ABI",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 5,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_AGENZIA",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 11,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 11,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_DEPOSITO",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 3,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 3,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_DIVISA",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 3,
+        "decimal_precision" : 18,
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_GIACENZA_CONTABILE",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "NUM_ISTITUTO",
+      "type" : "integer",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 6,
+        "decimal_precision" : 15,
+        "max_length" : 15,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_MOLTIPLICATORE",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 9,
+        "decimal_precision" : 18,
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_MOLTIPLICATORE_9_DECIMALI",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "DAT_RIFERIMENTO",
+      "type" : "date",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DATE",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DATE"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 3,
+        "decimal_precision" : 18,
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_SALDO_TITOLO_CONTROVALORE",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 5,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_SOTTODEPOSITO",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 11,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 11,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_TITOLO",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 5,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_UO",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 100,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_CHIAVE_DQ",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 3,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 3,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_SIST_ALIMNTNT",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 10,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_SSA_PROVNNZ",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 3,
+        "decimal_precision" : 18,
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_GIACENZA_REGISTRAZIONE",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 3,
+        "decimal_precision" : 18,
+        "max_length" : 18,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "IMP_GIACENZA_VALUTA",
+      "type" : "double",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DECIMAL",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "DECIMAL"
+      }
+    } ]
+  }, {
+    "id" : "cdee7eb3-b4a2-443c-9f60-b72ac5868a0c",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 5,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "COD_ABI",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : false,
+      "name" : "NUM_ISTITUTO",
+      "type" : "integer",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 11,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 11,
+        "is_signed" : false
+      },
+      "nullable" : false,
+      "name" : "COD_TITOLO",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "CHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "max_length" : 5,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "COD_ENTITA",
+      "type" : "string",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "array_handling" : 0,
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      }
+    } ]
+  } ],
+  "doc_type" : "pipeline",
+  "id" : "e579c52e-382c-414d-8c07-0dfc0327882f",
+  "app_data" : {
+    "datastage" : {
+      "timestamp_format" : "",
+      "decimal_separator" : "",
+      "flowRunPriorityQueue" : "Medium",
+      "time_format" : "",
+      "date_format" : "",
+      "message_handlers" : [ ],
+      "version" : "3.0.5"
+    },
+    "additionalProperties" : {
+      "transInputLinkMapper" : {
+        "14ba53f7-2bfe-433c-acca-b729e5452291" : "Lnk_trns"
+      },
+      "ELTDropdown" : {
+        "id" : "nesting",
+        "label" : "Generate nested SQL",
+        "value" : "NESTED_QUERY"
+      },
+      "rcpLinkList" : [ ],
+      "globalAcp" : true,
+      "enableRCP" : false,
+      "enableSchemaLessDesign" : false,
+      "runMode" : "ETL"
+    }
+  },
+  "version" : "3.0",
+  "parameters" : {
+    "local_parameters" : [ {
+      "subtype" : "",
+      "name" : "$BQ_PROJID_A1777A",
+      "type" : "string",
+      "prompt" : "$BQ_PROJID_A1777A",
+      "value" : "PROJDEF"
+    }, {
+      "subtype" : "",
+      "name" : "$BQ_DSNAME_A1777A",
+      "type" : "string",
+      "prompt" : "$BQ_DSNAME_A1777A",
+      "value" : "PROJDEF"
+    }, {
+      "subtype" : "",
+      "name" : "TMS_CARICAMENTO",
+      "type" : "string",
+      "prompt" : "TMS_CARICAMENTO",
+      "value" : "202004022359"
+    }, {
+      "subtype" : "",
+      "name" : "COD_SIST_ALIMNTNT",
+      "type" : "string",
+      "prompt" : "COD_SIST_ALIMNTNT",
+      "value" : "CAD"
+    }, {
+      "subtype" : "",
+      "name" : "COD_SSA_PROVNNZ",
+      "type" : "string",
+      "prompt" : "COD_SSA_PROVNNZ",
+      "value" : "A1"
+    }, {
+      "subtype" : "",
+      "name" : "COD_TIPO_ELABORAZIONE",
+      "type" : "string",
+      "prompt" : "COD_TIPO_ELABORAZIONE",
+      "value" : "ETL"
+    }, {
+      "subtype" : "",
+      "name" : "$GCS_BUCKET_TMP",
+      "type" : "string",
+      "prompt" : "$GCS_BUCKET_TMP",
+      "value" : "PROJDEF"
+    }, {
+      "subtype" : "",
+      "name" : "$BQ_PROJID_SSC0",
+      "type" : "string",
+      "prompt" : "$BQ_PROJID_SSC0",
+      "value" : "PROJDEF"
+    }, {
+      "subtype" : "",
+      "name" : "$BQ_DSNAME_SSCC0W",
+      "type" : "string",
+      "prompt" : "$BQ_DSNAME_SSCC0W",
+      "value" : "PROJDEF"
+    }, {
+      "subtype" : "",
+      "name" : "$BQ_DSNAME_SSCC0D",
+      "type" : "string",
+      "prompt" : "$BQ_DSNAME_SSCC0D",
+      "value" : "PROJDEF"
+    } ]
+  }
+}
