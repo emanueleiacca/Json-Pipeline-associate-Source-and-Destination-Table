@@ -35,7 +35,7 @@ for source in initial_sources:
 
 edges_df = pd.DataFrame(source_to_target_edges, columns=['Initial Source', 'Final Target'])
 
-print(edges_df)
+#print(edges_df)
 
 import pandas as pd
 
