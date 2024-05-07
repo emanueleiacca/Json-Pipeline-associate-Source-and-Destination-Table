@@ -1,5 +1,5 @@
 import re
-
+from utils3 import *
 query = """
 SELECT
 
@@ -141,36 +141,28 @@ SELECT
 
    AND MSTR.FLG_RECORD_VALIDO = 1
 
-   AND DATE(MSTR.TMS_ULTIMO_AGGRNMNT_LEGACY) <= DAT_FINE_TT"""
+   AND DATE(MSTR.TMS_ULTIMO_AGGRNMNT_LEGACY) <= DAT_FINE_TT
+   """
 
 
-selected_columns = re.findall(r'SELECT\s+(.*?)\s+FROM', query, re.DOTALL)[0].strip().split('\n')
+rows = query.split('\n')
 
-columns = []
-for column in selected_columns:
-    column = column.strip()
-    if 'AS' in column:
-        parts = re.split(r'\s+AS', column)
-        column_name = parts[0].strip()
-        alias = parts[1].strip()
-        columns.append((column_name, alias))
-    else:
-        columns.append((column, column))
+# Remove the rows that contain "THEN CAST" or "ELSE CAST"
+rows = [row for row in rows if not re.search(r'THEN CAST|ELSE CAST', row)]
 
-updated_columns = []
-for column in columns:
-    text = column[0]
-    while True:
-        innermost_texts = re.findall(r'\(([^()]*)\)', text)
-        if not innermost_texts:
-            break
-        names = [item.split(',')[0].strip().replace("'", '').replace('$', '').split(' as ')[0] for item in innermost_texts]
-        unique_names = [name for name in set(names) if not name.startswith('%')]
-        for innermost_text in innermost_texts:
-            text = re.sub(r'.*\(([^()]*)\).*', r', '.join(unique_names), text)
-    updated_columns.append((text, column[1]))
+# Join the rows back into a single query
+query = '\n'.join(rows)
 
-from_clause = re.search(r'FROM\s+(.*?)\s+(?:CROSS JOIN|WHERE|ORDER BY|LIMIT)', query, re.DOTALL).group(1)
+text = query.replace('\n', '')
+# Split the text into rows
+rows = re.split(r',(?![^()]*\))', text)
+query = '\n'.join(rows)
+#print(query)
+# Now apply the regex to find the part between SELECT and FROM
+updated_columns = process_sql_columns(query)
+#print(updated_columns)
+
+from_clause = re.search(r'FROM\s+(.*?)\s+(?:CROSS JOIN|WHERE|ORDER BY|LIMIT)', text, re.DOTALL).group(1)
 
 table_alias = re.search(r'(.*)\s+AS\s+(.*)', from_clause).groups()
 
@@ -186,23 +178,5 @@ for column in updated_columns:
     if alias + '.' in column_name:
         column_name = column_name.replace(alias + '.', table_name + '.')
     updated2_columns.append((text, column_name))
-
-transformations = re.search(r'CROSS JOIN.*?(?=;)', query, re.DOTALL).group(0)
-
-aliases = re.findall(r'AS\s+(.*?)\s*$', transformations, re.MULTILINE)
-
-columns = re.findall(r'UNNEST\(ARRAY\[(.*?)\]\)', transformations, re.DOTALL)
-
-for alias, column in zip(aliases, columns):
-    unique_values = list(set(re.findall(r'\(([^()]*)\)', column)))
-    unique_values = [value.split(',')[0].strip(" '").split(' as ')[0].split(' ', 1)[0] for value in unique_values]
-    unique_values = list(set(unique_values))
-    for i, (text, column_name) in enumerate(updated2_columns):
-        if alias == column_name.strip(','):
-            updated2_columns.pop(i)  # Remove the previous entry
-            break
-    for unique_value in unique_values:
-        updated2_columns.append((unique_value + '.', column_name))
-
-for column in updated2_columns:
-    print(column)
+#print(updated2_columns)
+extract_sql_details(query)

@@ -1,5 +1,5 @@
 import re
-
+from utils3 import *
 text = """
 SELECT
 
@@ -143,16 +143,4 @@ SELECT
 
    AND DATE(MSTR.TMS_ULTIMO_AGGRNMNT_LEGACY) <= DAT_FINE_TT
 """
-transformations = re.search(r'CROSS JOIN.*?(?=;)', text, re.DOTALL).group(0)
-
-aliases = re.findall(r'AS\s+(.*?)\s*$', transformations, re.MULTILINE)
-
-columns = re.findall(r'UNNEST\(ARRAY\[(.*?)\]\)', transformations, re.DOTALL)
-
-for alias, column in zip(aliases, columns):
-    print("Alias:", alias)
-    unique_values = list(set(re.findall(r'\(([^()]*)\)', column)))
-    unique_values = [value.split(',')[0].strip(" '").split(' as ')[0].split(' ', 1)[0] for value in unique_values]
-    print("Unique Values:", list(set(unique_values)))  # Use set to remove duplicates
-    print()
-
+extract_sql_details(text)

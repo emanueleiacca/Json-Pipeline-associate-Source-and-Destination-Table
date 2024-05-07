@@ -1,5 +1,5 @@
 import re
-
+from utils3 import process_sql_columns
 query = """
 SELECT
 
@@ -144,37 +144,19 @@ SELECT
    AND DATE(MSTR.TMS_ULTIMO_AGGRNMNT_LEGACY) <= DAT_FINE_TT
    """
 
-# Remove the CASE statement logic
-query = re.sub(r'CAST.+?END', '', query, flags=re.DOTALL)
-print(query)
-selected_columns = re.findall(r'SELECT\s+(.*?)\s+FROM', query, re.DOTALL)[0].strip().split('\n')
+# Split the query into rows
+rows = query.split('\n')
 
-columns = []
-for column in selected_columns:
-    column = column.strip()
-    if 'AS' in column:
-        parts = re.split(r'\s+AS', column)
-        if len(parts) > 1:
-            column_name = parts[0].strip()
-            alias = parts[1].strip()
-            columns.append((column_name, alias))
-        else:
-            columns.append((column, column))
-    else:
-        columns.append((column, column))
-        
-updated_columns = []
-for column in columns:
-    text = column[0]
-    while True:
-        innermost_texts = re.findall(r'\(([^()]*)\)', text)
-        if not innermost_texts:
-            break
-        names = [item.split(',')[0].strip().replace("'", '').replace('$', '').split(' as ')[0] for item in innermost_texts]
-        unique_names = list(set(names))
-        for innermost_text in innermost_texts:
-            text = re.sub(r'.*\(([^()]*)\).*', r', '.join(unique_names), text)
-    updated_columns.append((text, column[1]))
+# Remove the rows that contain "THEN CAST" or "ELSE CAST"
+rows = [row for row in rows if not re.search(r'THEN CAST|ELSE CAST', row)]
 
-for column in updated_columns:
-    print(column)
+# Join the rows back into a single query
+query = '\n'.join(rows)
+
+text = query.replace('\n', '')
+# Split the text into rows
+rows = re.split(r',(?![^()]*\))', text)
+query = '\n'.join(rows)
+#print(query)
+# Now apply the regex to find the part between SELECT and FROM
+process_sql_columns(query)
