@@ -143,4 +143,7 @@ SELECT
 
    AND DATE(MSTR.TMS_ULTIMO_AGGRNMNT_LEGACY) <= DAT_FINE_TT
 """
-extract_sql_details(text)
+results = extract_sql_details(text)
+print(results)
+
+

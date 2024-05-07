@@ -48,49 +48,49 @@ def process_sql_columns(query):
         print("No SELECT-FROM clause found in the query.")
 '''
 
+import re
+
 def extract_sql_details(sql_text):
-    try:
-        # Capture both CROSS JOIN and LEFT OUTER JOIN sections, including any subsequent conditions
-        joins = re.findall(r'(CROSS JOIN|LEFT OUTER JOIN)\s+(.*?)(?=\s+LEFT OUTER JOIN|\s+CROSS JOIN|$)', sql_text, re.DOTALL)
-        
-        # Dictionary to track table names associated with aliases for substitution
-        alias_table_map = {}
-        
-        for join_type, content in joins:
-            print(f"Processing {join_type}...")
-            
-            if join_type == 'CROSS JOIN':
-                # Extract aliases typically following 'AS' keyword for CROSS JOIN
-                aliases = re.findall(r'AS\s+(\w+)', content)
-                columns = re.findall(r'UNNEST\(ARRAY\[(.*?)\]\)', content, re.DOTALL)
+    # Capture both CROSS JOIN and LEFT OUTER JOIN sections, including any subsequent conditions
+    joins = re.findall(r'(CROSS JOIN|LEFT OUTER JOIN)\s+(.*?)(?=\s+LEFT OUTER JOIN|\s+CROSS JOIN|$)', sql_text, re.DOTALL)
 
-            elif join_type == 'LEFT OUTER JOIN':
-                # Extract tables and aliases for LEFT OUTER JOIN
-                table_aliases = re.findall(r'LEFT OUTER JOIN\s+([^\s]+)\s+AS\s+([^\s]+)\s+ON', sql_text)
-                #print(table_aliases)
-                for table, alias in table_aliases:
-                    alias_table_map[alias] = table  # Map aliases to tables
-                    #print(alias_table_map)
-                aliases = re.findall(r'<=\s+(\w+)', content)
-                columns = re.findall(r'ON\s+(.*?)(?=\s+LEFT OUTER JOIN|\s+CROSS JOIN|\s+WHERE|$)', content, re.DOTALL)
-            
-            # Process each alias and the respective SQL segment
-            for alias, column in zip(aliases, columns):
-                print(f"Alias: {alias}")
-                if column:
-                    unique_values = list(set(re.findall(r'\(([^()]*)\)', column)))
-                    # Substitute aliases with tables in unique values if applicable
-                    processed_values = [
-                        re.sub(rf'\b{alias}\b\.', f'{alias_table_map.get(alias, "Unknown")}.', value) for value in unique_values
-                    ]
-                    processed_values = [value.split(',')[0].strip(" '").split(' as ')[0].split(' ', 1)[0] for value in processed_values]
-                    #print(processed_values)
-                    print("Unique Values:", list(set(processed_values)))  # Use set to remove duplicates
-                print()
+    # Dictionary to track table names associated with aliases for substitution
+    alias_table_map = {}
+    results = []  # Collection to hold results instead of printing them
 
-    except AttributeError:
-        print("Failed to find the expected SQL segments.")
-    except Exception as e:
-        print(f"An error occurred: {e}")
+    for join_type, content in joins:
+        if join_type == 'CROSS JOIN':
+            # Extract aliases typically following 'AS' keyword for CROSS JOIN
+            aliases = re.findall(r'AS\s+(\w+)', content)
+            columns = re.findall(r'UNNEST\(ARRAY\[(.*?)\]\)', content, re.DOTALL)
 
+        elif join_type == 'LEFT OUTER JOIN':
+            # Extract tables and aliases for LEFT OUTER JOIN
+            aliases = re.findall(r'<=\s+(\w+)', content)
+            columns = re.findall(r'ON\s+(.*?)(?=\s+LEFT OUTER JOIN|\s+CROSS JOIN|\s+WHERE|$)', content, re.DOTALL)
+            pattern = r'LEFT OUTER JOIN\s+([^\s]+)\s+AS\s+([^\s]+)\s+ON'
+            joins = re.findall(pattern, sql_text, re.IGNORECASE)
+
+        # Process each alias and the respective SQL segment
+        for alias, column in zip(aliases, columns):
+            table_aliases = re.findall(r'LEFT OUTER JOIN\s+([^\s]+)\s+AS\s+([^\s]+)\s+ON', sql_text)
+            table_table = table_aliases[0][0]
+            alias_table = table_aliases[0][1]
+
+            if column:
+                unique_values = set(re.findall(r'\(([^()]*)\)', column))
+                processed_values = [value.split(',')[0].strip(" '").split(' as ')[0].split(' ', 1)[0] for value in unique_values]
+                updated_values = []
+
+                for value in processed_values:
+                    # Perform the replacement in each string individually
+                    prefix = value.split('.')[0] if '.' in value else None
+                    if prefix and prefix == alias_table:
+                        prefix_table = table_table
+                        value = value.replace(alias_table, prefix_table, 1)  # Replace only the first occurrence in each string
+                    updated_values.append(value)
+
+                results.append({"Alias": alias, "Processed Values": list(set(updated_values))})  # Deduplicate the final list
+
+    return results
 
