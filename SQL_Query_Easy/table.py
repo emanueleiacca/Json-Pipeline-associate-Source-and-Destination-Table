@@ -11,3 +11,4 @@ alias = table_alias[1].strip()
 
 print("Table Name:", table_name)
 print("Alias:", alias)
+
