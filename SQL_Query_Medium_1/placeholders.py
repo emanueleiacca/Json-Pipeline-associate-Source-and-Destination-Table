@@ -17,6 +17,18 @@ def substitute_parameters(table_name, parameters):
     # Replace all matches in the table name
     return pattern.sub(replace_match, table_name)
 
+def substitute_parameters_PROJDEF(table_name, parameters):
+    # Regex pattern to find placeholders in the form of #key#
+    pattern = re.compile(r'\#(.*?)\#')
+    
+    def replace_match(match):
+        key = match.group(1)  # Get the key from the match
+        # Replace with the parameter's default value if it exists, otherwise keep the original
+        return parameters.get(key, match.group(0))
+
+    # Replace all matches in the table name using the dictionary
+    return pattern.sub(replace_match, table_name)
+
 if __name__ == "__main__":
     # Load JSON data to extract the query
     with open(file_path, 'r') as file:

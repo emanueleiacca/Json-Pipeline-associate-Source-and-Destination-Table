@@ -1,0 +1,2800 @@
+{
+	"metadata": {
+		"asset_id": "c15e873a-2955-4892-ad73-b1e0ec319e0a",
+		"asset_type": "parameter_set",
+		"create_time": "2024-01-18T09:48:15Z",
+		"creator_id": "1000331001",
+		"name": "PROJDEF",
+		"description": "",
+		"href": "/v2/assets/c15e873a-2955-4892-ad73-b1e0ec319e0a?project_id=39a75fb9-584b-4281-8f54-772fb337aaa0",
+		"project_id": "39a75fb9-584b-4281-8f54-772fb337aaa0",
+		"catalog_id": "039b6049-896b-463a-9329-5844c5288a18",
+		"usage": {
+			"last_updated_at": "2024-05-06T15:37:25Z",
+			"last_updater_id": "1000331041",
+			"last_update_time": 1715009845736,
+			"last_accessed_at": "2024-05-06T15:37:25Z",
+			"last_access_time": 1715009845736,
+			"last_accessor_id": "1000331041",
+			"access_count": 0
+		}
+	},
+	"entity": {
+		"parameter_set": {
+			"name": "PROJDEF",
+			"description": "",
+			"parameters": [
+				{
+					"name": "$ABORT_PER_JOB_NON_CORRETTI",
+					"prompt": "ABORT_MAIL_PER_JOB_NON_CORRETTI",
+					"type": "string",
+					"value": "true",
+					"subtype": ""
+				},
+				{
+					"name": "$ARES_DB",
+					"prompt": "ARES",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$ARES_DNS",
+					"prompt": "ARES_DNS",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$ARES_OWNER",
+					"prompt": "ARES_OWNER",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$ARES_PWD",
+					"prompt": "ARES_PWD",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$ARES_USER",
+					"prompt": "ARES_USER",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_PROJECT_ID_QDBF0",
+					"prompt": "BQ_PROJECT_ID_QDBF0",
+					"type": "string",
+					"value": "prj-isp-qdbf0-appl-svil-001",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_SA_CREDENTIAL_FILE_QDBF0",
+					"prompt": "BQ_SA_CREDENTIAL_FILE_QDBF0",
+					"type": "string",
+					"value": "/datastage/data/BFDL0/ITT/config/sa-isp-qdbf0-appl-svil-001.json",
+					"subtype": ""
+				},
+				{
+					"name": "$BW_CONN",
+					"prompt": "BW_CONN",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$BW_SRC",
+					"prompt": "BW_SRC",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$CLARITY_DSN",
+					"prompt": "CLARITY_DSN",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$CLARITY_FAMILY_SLC_REQ_ID",
+					"prompt": "CLARITY_FAMILY_SLC_REQ_ID",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$CLARITY_LC_ETC_FAMILY_TABLE",
+					"prompt": "CLARITY_LC_ETC_FAMILY_TABLE",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$CLARITY_LC_ETC_RR_TABLE",
+					"prompt": "CLARITY_LC_ETC_RR_TABLE",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$CLARITY_OWNER",
+					"prompt": "CLARITY_OWNER",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$CLARITY_PWD",
+					"prompt": "CLARITY_PWD",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$CLARITY_RR_SLC_REQ_ID",
+					"prompt": "CLARITY_RR_SLC_REQ_ID",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$CLARITY_USER",
+					"prompt": "CLARITY_USER",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$COD_AMBITO",
+					"prompt": "COD_AMBITO",
+					"type": "string",
+					"value": "BFD10",
+					"subtype": ""
+				},
+				{
+					"name": "$DATA_CARICAMENTO",
+					"prompt": "DATA_CARICAMENTO",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$DBLOG_SERVER",
+					"prompt": "DBLOG_SERVER",
+					"type": "string",
+					"value": "STDMOS03",
+					"subtype": ""
+				},
+				{
+					"name": "$DBLOG_USER",
+					"prompt": "DBLOG_USER",
+					"type": "string",
+					"value": "TBFDL_APP",
+					"subtype": ""
+				},
+				{
+					"name": "$DIR_BIN",
+					"prompt": "DIR_BIN",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$DIR_CMD",
+					"prompt": "DIR_CMD",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$DIR_HASH",
+					"prompt": "DIR_HASH",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$DIR_INPUT",
+					"prompt": "DIR_INPUT",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$DIR_LOG",
+					"prompt": "DIR_LOG",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$DIR_OUTPUT",
+					"prompt": "DIR_OUTPUT",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$DIR_PARAM",
+					"prompt": "DIR_PARAM",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$DIR_SEMAFORO",
+					"prompt": "DIR_SEMAFORO",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$DIR_SEMAFORO_ANAGRAFICHE",
+					"prompt": "DIR_SEMAFORO_ANAGRAFICHE",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$DIR_SEMAFORO_CANCELLAZIONI",
+					"prompt": "DIR_SEMAFORO_CANCELLAZIONI",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$DISABLE_ALL_LOG",
+					"prompt": "DISABLE_ALL_LOG",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$DNS_PS",
+					"prompt": "DNS_PS",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$DSJobStartedMax",
+					"prompt": "DSJobStartedMax",
+					"type": "string",
+					"value": "50",
+					"subtype": ""
+				},
+				{
+					"name": "$DSN_MDB",
+					"prompt": "DSN DB appoggio",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$DSN_PS",
+					"prompt": "DSN_PS",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$ENABLE_ARCHIVE_TO_HD",
+					"prompt": "ENABLE_ARCHIVE_TO_HD",
+					"type": "string",
+					"value": "1",
+					"subtype": ""
+				},
+				{
+					"name": "$ETL_DB",
+					"prompt": "ETL_DB",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$ETL_DSN",
+					"prompt": "ETL_DSN",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$ETL_HOSTDB",
+					"prompt": "ETL_HOSTDB",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$ETL_PWD",
+					"prompt": "ETL_PWD",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$ETL_USER",
+					"prompt": "ETL_USER",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$ETL_WKDIR",
+					"prompt": "ETL_WKDIR",
+					"type": "string",
+					"value": "/datastage/data/SSC10/",
+					"subtype": ""
+				},
+				{
+					"name": "$HDFS_PORT_SDL",
+					"prompt": "HDFS_PORT_SDL",
+					"type": "string",
+					"value": "14000",
+					"subtype": ""
+				},
+				{
+					"name": "$HDFS_PORT_SDL_NEW",
+					"prompt": "HDFS_PORT_SDL_NEW",
+					"type": "string",
+					"value": "15000",
+					"subtype": ""
+				},
+				{
+					"name": "$HDFS_SERVER_SDL",
+					"prompt": "HDFS_SERVER_SDL",
+					"type": "string",
+					"value": "shdcas01-230-9.sede.corp.sanpaoloimi.com",
+					"subtype": ""
+				},
+				{
+					"name": "$HDFS_SERVER_SDL_NEW",
+					"prompt": "HDFS_SERVER_SDL_NEW",
+					"type": "string",
+					"value": "hdsuprs001.sede.corp.sanpaoloimi.com",
+					"subtype": ""
+				},
+				{
+					"name": "$HDP_DBDIR_SDL10",
+					"prompt": "HDP_DBDIR_SDL10",
+					"type": "string",
+					"value": "/apps/svil/SDL10/hive/",
+					"subtype": ""
+				},
+				{
+					"name": "$HDP_DBDIR_SDL10_NEW",
+					"prompt": "HDP_DBDIR_SDL10_NEW",
+					"type": "string",
+					"value": "/data/FD/SDL10/hive/tsdl10h",
+					"subtype": ""
+				},
+				{
+					"name": "$HDP_DBHIVE_SDL10",
+					"prompt": "HDP_DBHIVE_SDL10",
+					"type": "string",
+					"value": "tsdl10h",
+					"subtype": ""
+				},
+				{
+					"name": "$HDP_RDR_NAMESERVICE",
+					"prompt": "HDP_RDR_NAMESERVICE",
+					"type": "string",
+					"value": "SHDCAS02",
+					"subtype": ""
+				},
+				{
+					"name": "$HDP_SDL_HIVESERVER2",
+					"prompt": "HDP_SDL_HIVESERVER2",
+					"type": "string",
+					"value": "SHDCAS01-230-2.sede.corp.sanpaoloimi.com",
+					"subtype": ""
+				},
+				{
+					"name": "$HDP_SDL_HIVESERVER2_PORT",
+					"prompt": "HDP_SDL_HIVESERVER2_PORT",
+					"type": "string",
+					"value": "10000",
+					"subtype": ""
+				},
+				{
+					"name": "$HDP_USER_SDL10",
+					"prompt": "HDP_USER_SDL10",
+					"type": "string",
+					"value": "tsdl1_hdfs",
+					"subtype": ""
+				},
+				{
+					"name": "$HDP_USER_SDL10_NEW",
+					"prompt": "HDP_USER_SDL10_NEW",
+					"type": "string",
+					"value": "tsdl1_app",
+					"subtype": ""
+				},
+				{
+					"name": "$HDP_WKA_SDL10",
+					"prompt": "HDP_WKA_SDL10",
+					"type": "string",
+					"value": "/apps/svil/SDL10/data/",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVE_DB_BLJB0",
+					"prompt": "HIVE_DB_BLJB0",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVE_DB_SCH10",
+					"prompt": "HIVE_DB_SCH10",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVE_DB_ZW777",
+					"prompt": "HIVE_DB_ZW777",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVE_JDBC_STRING",
+					"prompt": "HIVE_JDBC_STRING",
+					"type": "string",
+					"value": "jdbc:hive2://hdmaprs001.sede.corp.sanpaoloimi.com:10000;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVE_JDBC_STRING_1",
+					"prompt": "HIVE_JDBC_STRING_1",
+					"type": "string",
+					"value": "jdbc:hive2://hdmaprs001.sede.corp.sanpaoloimi.com:10000",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVE_JDBC_STRING_2",
+					"prompt": "HIVE_JDBC_STRING_2",
+					"type": "string",
+					"value": ";serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVE_SDL_JDBC_STRING",
+					"prompt": "HIVE_SDL_JDBC_STRING",
+					"type": "string",
+					"value": "jdbc:hive2://shdcas01-230-2.sede.corp.sanpaoloimi.com:2181,shdcas01-230-3.sede.corp.sanpaoloimi.com:2181,shdcas01-230-4.sede.corp.sanpaoloimi.com:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVE_SDL_JDBC_STRING_NEW",
+					"prompt": "HIVE_SDL_JDBC_STRING_NEW",
+					"type": "string",
+					"value": "jdbc:hive2://hdmaprs001.sede.corp.sanpaoloimi.com:2181,hdmaprs002.sede.corp.sanpaoloimi.com:2181,hdslprs001.sede.corp.sanpaoloimi.com:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2",
+					"subtype": ""
+				},
+				{
+					"name": "$HOME",
+					"prompt": "HOME",
+					"type": "string",
+					"value": "/home/dstssc10",
+					"subtype": ""
+				},
+				{
+					"name": "$JOBS_START_DIS_WRITER",
+					"prompt": "JOBS_START_DIS_WRITER",
+					"type": "string",
+					"value": "False",
+					"subtype": ""
+				},
+				{
+					"name": "$JOBS_START_ERR_WRITER",
+					"prompt": "JOBS_START_ERR_WRITER",
+					"type": "string",
+					"value": "False",
+					"subtype": ""
+				},
+				{
+					"name": "$LANG",
+					"prompt": "LANG",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$LDR_CNTRL",
+					"prompt": "LDR_CNTRL",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$LEVEL_ERROR_CATALOG_JOB",
+					"prompt": "LEVEL_ERROR_CATALOG_JOB",
+					"type": "string",
+					"value": "2",
+					"subtype": ""
+				},
+				{
+					"name": "$LEVEL_ERROR_NAMING_JOB",
+					"prompt": "LEVEL_ERROR_NAMING_JOB",
+					"type": "string",
+					"value": "2",
+					"subtype": ""
+				},
+				{
+					"name": "$LEVEL_ERROR_RECORD_COUNT",
+					"prompt": "LEVEL_ERROR_RECORD_COUNT",
+					"type": "string",
+					"value": "2",
+					"subtype": ""
+				},
+				{
+					"name": "$LOG_BIN",
+					"prompt": "LOG_BIN",
+					"type": "string",
+					"value": "/datastage/data/SSC10/app/LOG/",
+					"subtype": ""
+				},
+				{
+					"name": "$LOG_DIS",
+					"prompt": "LOG_DIS",
+					"type": "string",
+					"value": "/datastage/data/SSC10/rejectarea/",
+					"subtype": ""
+				},
+				{
+					"name": "$LOG_ERR",
+					"prompt": "LOG_ERR",
+					"type": "string",
+					"value": "/datastage/data/SSC10/log/",
+					"subtype": ""
+				},
+				{
+					"name": "$LOG_PATH",
+					"type": "string",
+					"value": "/mnts/BQBQ0_SVIL_CP4D/SSCC0/ITT/logs",
+					"prompt": "LOG_PATH",
+					"subtype": ""
+				},
+				{
+					"name": "$LOG_REC",
+					"prompt": "LOG_REC",
+					"type": "string",
+					"value": "/datastage/data/SSC10/recyclearea/",
+					"subtype": ""
+				},
+				{
+					"name": "$LOG_WORK",
+					"prompt": "LOG_WORK",
+					"type": "string",
+					"value": "/datastage/data/SSC10/workarea/",
+					"subtype": ""
+				},
+				{
+					"name": "$MAIL_LlST_ABORT",
+					"prompt": "MAIL_LlST_ABORT",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$MAIL_PER_JOB_NON_CORRETTI",
+					"prompt": "SEND_MAIL_PER_JOB_NON_CORRETTI",
+					"type": "string",
+					"value": "true",
+					"subtype": ""
+				},
+				{
+					"name": "$MPP_WEB_SERVICE_PORT_ADDRESS",
+					"type": "string",
+					"value": "http://serviziBE-mpp20.syssede.systest.sanpaoloimi.com:7479/AggiornaStatoEventoService",
+					"prompt": "MPP Web Service Port Address",
+					"subtype": ""
+				},
+				{
+					"name": "$MPP_WSDL_ADDRESS",
+					"type": "string",
+					"value": "http://serviziBE-mpp20.syssede.systest.sanpaoloimi.com:7479/AggiornaStatoEventoService?wsdl",
+					"prompt": "MPP WSDL Address",
+					"subtype": ""
+				},
+				{
+					"name": "$NLS_LANG",
+					"prompt": "NLS_LANG",
+					"type": "string",
+					"value": "AMERICAN_AMERICA.WE8ISO8859P15",
+					"subtype": ""
+				},
+				{
+					"name": "$ODBCINI",
+					"prompt": "g",
+					"type": "string",
+					"value": "/opt/teradata/client/15.00/odbc_64/odbc.ini",
+					"subtype": ""
+				},
+				{
+					"name": "$ODBCINST",
+					"prompt": "f",
+					"type": "string",
+					"value": "/opt/teradata/client/15.00/odbc_64/odbcinst.ini",
+					"subtype": ""
+				},
+				{
+					"name": "$ORCL_CDMV_SERVER",
+					"prompt": "ORCL_CDMV_SERVER",
+					"type": "string",
+					"value": "TCDMV0_ETL_EXT",
+					"subtype": ""
+				},
+				{
+					"name": "$ORCL_CDMV_USER",
+					"prompt": "ORCL_CDMV_USER",
+					"type": "string",
+					"value": "CDMV_SSC10_USR",
+					"subtype": ""
+				},
+				{
+					"name": "$ORCL_DTLY_DBNAME",
+					"prompt": "ORCL_DTLY_DBNAME",
+					"type": "string",
+					"value": "DTLY0C01_APPSVL",
+					"subtype": ""
+				},
+				{
+					"name": "$ORCL_DTLY_SERVER",
+					"prompt": "ORCL_DTLY_SERVER",
+					"type": "string",
+					"value": "SDTLY0ONS",
+					"subtype": ""
+				},
+				{
+					"name": "$ORCL_DTLY_USER",
+					"prompt": "ORCL_DTLY_USER",
+					"type": "string",
+					"value": "DTLY0SSC_ROSVL",
+					"subtype": ""
+				},
+				{
+					"name": "$ORCL_SDL1_SERVER",
+					"prompt": "ORCL_SDL1_SERVER",
+					"type": "string",
+					"value": "TCF24",
+					"subtype": ""
+				},
+				{
+					"name": "$ORCL_SDL1_USER",
+					"prompt": "ORCL_SDL1_USER",
+					"type": "string",
+					"value": "SDL1_APP",
+					"subtype": ""
+				},
+				{
+					"name": "$OUTPUT_FILE",
+					"prompt": "OUTPUT_FILE",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PATH_BIN",
+					"type": "string",
+					"value": "/mnts/BQBQ0_SVIL_CP4D/SSCC0/ITT/bin/",
+					"prompt": "PATH_BIN",
+					"subtype": ""
+				},
+				{
+					"name": "$PATH_IN",
+					"type": "string",
+					"value": "/mnts/BQBQ0_SVIL_CP4D/SSCC0/ITT/in/",
+					"prompt": "PATH_IN",
+					"subtype": ""
+				},
+				{
+					"name": "$PATH_OUT",
+					"type": "string",
+					"value": "/mnts/BQBQ0_SVIL_CP4D/SSCC0/ITT/out/",
+					"prompt": "PATH_OUT",
+					"subtype": ""
+				},
+				{
+					"name": "$PLA_DSN",
+					"prompt": "PLA_DSN",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PLA_PWD",
+					"prompt": "PLA_PWD",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PLA_QUERY_FILE",
+					"prompt": "PLA_QUERY_FILE",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PLA_USER",
+					"prompt": "PLA_USER",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$POST_BQBQ_DBNAME",
+					"prompt": "POST_BQBQ_DBNAME",
+					"type": "string",
+					"value": "BQBQ_OWN",
+					"subtype": ""
+				},
+				{
+					"name": "$POST_BQBQ_JDBC_STRING",
+					"prompt": "POST_BQBQ_JDBC_STRING",
+					"type": "string",
+					"value": "jdbc:edb://vmgcldlsv1048.syssede.systest.sanpaoloimi.com:5313,vmgcldlsv1049.syssede.systest.sanpaoloimi.com:5313,vmgcldlsv1046.syssede.systest.sanpaoloimi.com:5313/tbqbq0?targetServerType=primary",
+					"subtype": ""
+				},
+				{
+					"name": "$POST_BQBQ_USER",
+					"prompt": "POST_BQBQ_USER",
+					"type": "string",
+					"value": "bqbq_own",
+					"subtype": ""
+				},
+				{
+					"name": "$POST_SDL1_DBNAME",
+					"prompt": "POST_SDL1_DBNAME",
+					"type": "string",
+					"value": "sdl1_own",
+					"subtype": ""
+				},
+				{
+					"name": "$POST_SDL1_JDBC_STRING",
+					"prompt": "POST_SDL1_JDBC_STRING",
+					"type": "string",
+					"value": "jdbc:edb://sdlvms0032.syssede.systest.sanpaoloimi.com:5327,sdlvms0033.syssede.systest.sanpaoloimi.com:5327/tsdl10?targetServerType=primary",
+					"subtype": ""
+				},
+				{
+					"name": "$POST_SDL1_PSW",
+					"prompt": "POST_SDL1_PSW",
+					"type": "string",
+					"value": "sdl1_own",
+					"subtype": ""
+				},
+				{
+					"name": "$PROJECT_MAIL",
+					"prompt": "PROJECT_MAIL",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$PSO_DSN",
+					"prompt": "PSO_DSN",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PSO_PWD",
+					"prompt": "PSO_PWD",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PSO_SCHEMA",
+					"prompt": "Schema Owner PS",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PSO_SCHEMA_RECR",
+					"prompt": "PSO_SCHEMA_RECR",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PSO_SCHEMA_SEGM",
+					"prompt": "PSO_SCHEMA_SEGM",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PSO_SCHEMA_TRAIN",
+					"prompt": "Schema Owner PS",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PSO_USER",
+					"prompt": "PSO_USER",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PWD_MDB",
+					"prompt": "Password DB appoggio",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PWD_PS",
+					"prompt": "PWD_PS",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PWS_DIR_HASH",
+					"prompt": "PWS_DIR_HASH",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PWS_DIR_INPUT",
+					"prompt": "PWS_DIR_INPUT",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PWS_DIR_OUTPUT",
+					"prompt": "PWS_DIR_OUTPUT",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PWS_DSN",
+					"prompt": "PWS_DSN",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PWS_PWD",
+					"prompt": "PWS_PWD",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$PWS_USER",
+					"prompt": "PWS_USER",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$SCRIPT_ARCHIVE_TO_HD",
+					"prompt": "SCRIPT_ARCHIVE_TO_HD",
+					"type": "string",
+					"value": "/datastage/data/SSC10/ITT/bin/archive.sh",
+					"subtype": ""
+				},
+				{
+					"name": "$SCRIPT_REJECT_ARCHIVE_TO_HD",
+					"prompt": "SCRIPT_REJECT_ARCHIVE_TO_HD",
+					"type": "string",
+					"value": "/datastage/data/SSC10/ITT/bin/archive_reject_area.sh",
+					"subtype": ""
+				},
+				{
+					"name": "$SCRIPT_RESTORE_FROM_HD",
+					"prompt": "SCRIPT_RESTORE_FROM_HD",
+					"type": "string",
+					"value": "/datastage/data/SSC10/ITT/bin/disarchive.sh",
+					"subtype": ""
+				},
+				{
+					"name": "$SOTTOSISTEMA",
+					"prompt": "SOTTOSISTEMA",
+					"type": "string",
+					"value": "FB",
+					"subtype": ""
+				},
+				{
+					"name": "$TEAM",
+					"prompt": "TEAM",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_2L777A",
+					"prompt": "TERA_DBNAME_2L777A",
+					"type": "string",
+					"value": "T2L777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_2N777A",
+					"prompt": "TERA_DBNAME_2N777A",
+					"type": "string",
+					"value": "T2N777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_2U777A",
+					"prompt": "TERA_DBNAME_2U777A",
+					"type": "string",
+					"value": "T2U777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_7D777A",
+					"prompt": "TERA_DBNAME_7D777A",
+					"type": "string",
+					"value": "T7D777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_9P777A",
+					"prompt": "TERA_DBNAME_9P777A",
+					"type": "string",
+					"value": "T9P777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_AEST0A",
+					"prompt": "TERA_DBNAME_AEST0A",
+					"type": "string",
+					"value": "TAEST0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_AF777A",
+					"prompt": "TERA_DBNAME_AF777A",
+					"type": "string",
+					"value": "TAF777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_AG777A",
+					"prompt": "TERA_DBNAME_AG777A",
+					"type": "string",
+					"value": "TAG777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_AK777A",
+					"prompt": "TERA_DBNAME_AK777A",
+					"type": "string",
+					"value": "TAK777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_ALG50A",
+					"prompt": "TERA_DBNAME_ALG50A",
+					"type": "string",
+					"value": "TALG50A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_ALGO0A",
+					"prompt": "TERA_DBNAME_ALGO0A",
+					"type": "string",
+					"value": "TALGO0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_ANAG0A",
+					"prompt": "TERA_DBNAME_ANAG0A",
+					"type": "string",
+					"value": "TANAG0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BDL10A",
+					"prompt": "TERA_DBNAME_BDL10A",
+					"type": "string",
+					"value": "TBDL10A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BE777A",
+					"prompt": "TERA_DBNAME_BE777A",
+					"type": "string",
+					"value": "TBE777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFD10A",
+					"prompt": "TERA_DBNAME_BFD10A",
+					"type": "string",
+					"value": "TBFD10A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFD10D",
+					"prompt": "TERA_DBNAME_BFD10D",
+					"type": "string",
+					"value": "TBFD10D",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFD10W",
+					"prompt": "TERA_DBNAME_BFD10W",
+					"type": "string",
+					"value": "TBFD10W",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFD20A",
+					"prompt": "TERA_DBNAME_BFD20A",
+					"type": "string",
+					"value": "TBFD20A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFD20D",
+					"prompt": "TERA_DBNAME_BFD20D",
+					"type": "string",
+					"value": "TBFD20D",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFD20W",
+					"prompt": "TERA_DBNAME_BFD20W",
+					"type": "string",
+					"value": "TBFD20W",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFDA0A",
+					"prompt": "TERA_DBNAME_BFDA0A",
+					"type": "string",
+					"value": "TBFDA0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFDA0D",
+					"prompt": "TERA_DBNAME_BFDA0D",
+					"type": "string",
+					"value": "TBFDA0D",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFDA0W",
+					"prompt": "TERA_DBNAME_BFDA0W",
+					"type": "string",
+					"value": "TBFDA0W",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFDC0A",
+					"prompt": "TERA_DBNAME_BFDC0A",
+					"type": "string",
+					"value": "TBFDC0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFDL0A",
+					"prompt": "TERA_DBNAME_BFDL0A",
+					"type": "string",
+					"value": "TBFDL0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFDL0D",
+					"prompt": "TERA_DBNAME_BFDL0D",
+					"type": "string",
+					"value": "TBFDL0D",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFDL0W",
+					"prompt": "TERA_DBNAME_BFDL0W",
+					"type": "string",
+					"value": "TBFDL0W",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BFDV0A",
+					"prompt": "TERA_DBNAME_BFDV0A",
+					"type": "string",
+					"value": "TBFDV0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_BROD0A",
+					"prompt": "TERA_DBNAME_BROD0A",
+					"type": "string",
+					"value": "TBROD0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_CALY0A",
+					"prompt": "TERA_DBNAME_CALY0A",
+					"type": "string",
+					"value": "TCALY0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_CDIL0A",
+					"prompt": "TERA_DBNAME_CDIL0A",
+					"type": "string",
+					"value": "TCDIL0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_CDMV0A",
+					"prompt": "TERA_DBNAME_CDMV0A",
+					"type": "string",
+					"value": "TCDMV0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_CHUC0A",
+					"prompt": "TERA_DBNAME_CHUC0A",
+					"type": "string",
+					"value": "TCHUC0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_CNDZ0A",
+					"prompt": "TERA_DBNAME_CNDZ0A",
+					"type": "string",
+					"value": "TCNDZ0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_CNTR0A",
+					"prompt": "TERA_DBNAME_CNTR0A",
+					"type": "string",
+					"value": "TCNTR0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_COND0A",
+					"prompt": "TERA_DBNAME_COND0A",
+					"type": "string",
+					"value": "TCOND0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_CREW0A",
+					"prompt": "TERA_DBNAME_CREW0A",
+					"type": "string",
+					"value": "TCREW0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_CVAI0A",
+					"prompt": "TERA_DBNAME_CVAI0A",
+					"type": "string",
+					"value": "TCVAI0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_D0730A",
+					"prompt": "TERA_DBNAME_D0730A",
+					"type": "string",
+					"value": "TD0730A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_D4777A",
+					"prompt": "TERA_DBNAME_D4777A",
+					"type": "string",
+					"value": "TD4777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_D7777A",
+					"prompt": "TERA_DBNAME_D7777A",
+					"type": "string",
+					"value": "TD7777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_DCIB0A",
+					"prompt": "TERA_DBNAME_DCIB0A",
+					"type": "string",
+					"value": "TDCIB0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_DECO0A",
+					"prompt": "TERA_DBNAME_DECO0A",
+					"type": "string",
+					"value": "TDECO0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_DI777A",
+					"prompt": "TERA_DBNAME_DI777A",
+					"type": "string",
+					"value": "TDI777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_E2777A",
+					"prompt": "TERA_DBNAME_E2777A",
+					"type": "string",
+					"value": "TE2777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_E3777A",
+					"prompt": "TERA_DBNAME_E3777A",
+					"type": "string",
+					"value": "TE3777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_EAFD0D",
+					"prompt": "TERA_DBNAME_EAFD0D",
+					"type": "string",
+					"value": "TEAFD0D",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_EAIS0A",
+					"prompt": "TERA_DBNAME_EAIS0A",
+					"type": "string",
+					"value": "TEAIS0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_EB777A",
+					"prompt": "TERA_DBNAME_EB777A",
+					"type": "string",
+					"value": "TEB777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_EE777A",
+					"prompt": "TERA_DBNAME_EE777A",
+					"type": "string",
+					"value": "TEE777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_EN777A",
+					"prompt": "TERA_DBNAME_EN777A",
+					"type": "string",
+					"value": "TEN777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_EPCE0A",
+					"prompt": "TERA_DBNAME_EPCE0A",
+					"type": "string",
+					"value": "TEPCE0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_ER777A",
+					"prompt": "TERA_DBNAME_ER777A",
+					"type": "string",
+					"value": "TER777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_ES777A",
+					"prompt": "TERA_DBNAME_ES777A",
+					"type": "string",
+					"value": "TES777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_ET777A",
+					"prompt": "TERA_DBNAME_ET777A",
+					"type": "string",
+					"value": "TET777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_ETFL0A",
+					"prompt": "TERA_DBNAME_ETFL0A",
+					"type": "string",
+					"value": "TETFL0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_EZEX0D",
+					"prompt": "TERA_DBNAME_EZEX0D",
+					"type": "string",
+					"value": "TEZEX0D",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_FL777A",
+					"prompt": "TERA_DBNAME_FL777A",
+					"type": "string",
+					"value": "TFL777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_FUG10A",
+					"prompt": "TERA_DBNAME_FUG10A",
+					"type": "string",
+					"value": "TFUG10A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_FZ777A",
+					"prompt": "TERA_DBNAME_FZ777A",
+					"type": "string",
+					"value": "TFZ777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_G1777A",
+					"prompt": "TERA_DBNAME_G1777A",
+					"type": "string",
+					"value": "TG1777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_G4777A",
+					"prompt": "TERA_DBNAME_G4777A",
+					"type": "string",
+					"value": "TG4777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_GART0A",
+					"prompt": "TERA_DBNAME_GART0A",
+					"type": "string",
+					"value": "TGART0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_GAUD0A",
+					"prompt": "TERA_DBNAME_GAUD0A",
+					"type": "string",
+					"value": "TGAUD0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_GDI00A",
+					"prompt": "TERA_DBNAME_GDI00A",
+					"type": "string",
+					"value": "TGDI00A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_GF777A",
+					"prompt": "TERA_DBNAME_GF777A",
+					"type": "string",
+					"value": "TGF777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_GK777A",
+					"prompt": "TERA_DBNAME_GK777A",
+					"type": "string",
+					"value": "TGK777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_GKAT0A",
+					"prompt": "TERA_DBNAME_GKAT0A",
+					"type": "string",
+					"value": "TGKAT0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_GKBU0A",
+					"prompt": "TERA_DBNAME_GKBU0A",
+					"type": "string",
+					"value": "TGKBU0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_GPDC0A",
+					"prompt": "TERA_DBNAME_GPDC0A",
+					"type": "string",
+					"value": "TGPDC0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_GPER0A",
+					"prompt": "TERA_DBNAME_GPER0A",
+					"type": "string",
+					"value": "TGPER0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_GRIF0A",
+					"prompt": "TERA_DBNAME_GRIF0A",
+					"type": "string",
+					"value": "TGRIF0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_GTT00A",
+					"prompt": "TERA_DBNAME_GTT00A",
+					"type": "string",
+					"value": "TGTT00A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_GWIB0A",
+					"prompt": "TERA_DBNAME_GWIB0A",
+					"type": "string",
+					"value": "TGWIB0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_I2777A",
+					"prompt": "TERA_DBNAME_I2777A",
+					"type": "string",
+					"value": "TI2777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_I4777A",
+					"prompt": "TERA_DBNAME_I4777A",
+					"type": "string",
+					"value": "TI4777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_I8777A",
+					"prompt": "TERA_DBNAME_I8777A",
+					"type": "string",
+					"value": "TI8777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_ID777A",
+					"prompt": "TERA_DBNAME_ID777A",
+					"type": "string",
+					"value": "TID777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_IF777A",
+					"prompt": "TERA_DBNAME_IF777A",
+					"type": "string",
+					"value": "TIF777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_IFOX0A",
+					"prompt": "TERA_DBNAME_IFOX0A",
+					"type": "string",
+					"value": "TIFOX0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_IFPR0A",
+					"prompt": "TERA_DBNAME_IFPR0A",
+					"type": "string",
+					"value": "TIFPR0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_IJ777A",
+					"prompt": "TERA_DBNAME_IJ777A",
+					"type": "string",
+					"value": "TIJ777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_ISYJ0A",
+					"prompt": "TERA_DBNAME_ISYJ0A",
+					"type": "string",
+					"value": "TISYJ0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_ISYL0A",
+					"prompt": "TERA_DBNAME_ISYL0A",
+					"type": "string",
+					"value": "TISYL0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_IY777A",
+					"prompt": "TERA_DBNAME_IY777A",
+					"type": "string",
+					"value": "TIY777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_J1777A",
+					"prompt": "TERA_DBNAME_J1777A",
+					"type": "string",
+					"value": "TJ1777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_J3000A",
+					"prompt": "TERA_DBNAME_J3000A",
+					"type": "string",
+					"value": "TJ3000A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_J4777A",
+					"prompt": "TERA_DBNAME_J4777A",
+					"type": "string",
+					"value": "TJ4777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_JJ777A",
+					"prompt": "TERA_DBNAME_JJ777A",
+					"type": "string",
+					"value": "TJJ777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_JL777A",
+					"prompt": "TERA_DBNAME_JL777A",
+					"type": "string",
+					"value": "TJL777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_KE777A",
+					"prompt": "TERA_DBNAME_KE777A",
+					"type": "string",
+					"value": "TKE777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_KOND0A",
+					"prompt": "TERA_DBNAME_KOND0A",
+					"type": "string",
+					"value": "TKOND0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_L3777A",
+					"prompt": "TERA_DBNAME_L3777A",
+					"type": "string",
+					"value": "TL3777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_LA777A",
+					"prompt": "TERA_DBNAME_LA777A",
+					"type": "string",
+					"value": "TLA777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_LI777A",
+					"prompt": "TERA_DBNAME_LI777A",
+					"type": "string",
+					"value": "TLI777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_LK777A",
+					"prompt": "TERA_DBNAME_LK777A",
+					"type": "string",
+					"value": "TLK777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_LL777A",
+					"prompt": "TERA_DBNAME_LL777A",
+					"type": "string",
+					"value": "TLL777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_LMBE0A",
+					"prompt": "TERA_DBNAME_LMBE0A",
+					"type": "string",
+					"value": "TLMBE0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_LOAQ0A",
+					"prompt": "TERA_DBNAME_LOAQ0A",
+					"type": "string",
+					"value": "TLOAQ0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_LW777A",
+					"prompt": "TERA_DBNAME_LW777A",
+					"type": "string",
+					"value": "TLW777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_MBPF0A",
+					"prompt": "TERA_DBNAME_MBPF0A",
+					"type": "string",
+					"value": "TMBPF0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_MC777A",
+					"prompt": "TERA_DBNAME_MC777A",
+					"type": "string",
+					"value": "TMC777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_MCRE0A",
+					"prompt": "TERA_DBNAME_MCRE0A",
+					"type": "string",
+					"value": "TMCRE0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_MI777A",
+					"prompt": "TERA_DBNAME_MI777A",
+					"type": "string",
+					"value": "TMI777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_MO777A",
+					"prompt": "TERA_DBNAME_MO777A",
+					"type": "string",
+					"value": "TMO777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_MOFR0A",
+					"prompt": "TERA_DBNAME_MOFR0A",
+					"type": "string",
+					"value": "TMOFR0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_MPEG0A",
+					"prompt": "TERA_DBNAME_MPEG0A",
+					"type": "string",
+					"value": "TMPEG0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_MQ777A",
+					"prompt": "TERA_DBNAME_MQ777A",
+					"type": "string",
+					"value": "TMQ777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_MRC10A",
+					"prompt": "TERA_DBNAME_MRC10A",
+					"type": "string",
+					"value": "TMRC10A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_MRC10D",
+					"prompt": "TERA_DBNAME_MRC10D",
+					"type": "string",
+					"value": "TMRC10D",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_MX310A",
+					"prompt": "TERA_DBNAME_MX310A",
+					"type": "string",
+					"value": "TMX310A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_MYBE0A",
+					"prompt": "TERA_DBNAME_MYBE0A",
+					"type": "string",
+					"value": "TMYBE0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_MZBE0A",
+					"prompt": "TERA_DBNAME_MZBE0A",
+					"type": "string",
+					"value": "TMZBE0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_NC777A",
+					"prompt": "TERA_DBNAME_NC777A",
+					"type": "string",
+					"value": "TNC777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_ND777A",
+					"prompt": "TERA_DBNAME_ND777A",
+					"type": "string",
+					"value": "TND777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_NE777A",
+					"prompt": "TERA_DBNAME_NE777A",
+					"type": "string",
+					"value": "TNE777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_NOPV0A",
+					"prompt": "TERA_DBNAME_NOPV0A",
+					"type": "string",
+					"value": "TNOPV0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_NU777A",
+					"prompt": "TERA_DBNAME_NU777A",
+					"type": "string",
+					"value": "TNU777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_NZ777A",
+					"prompt": "TERA_DBNAME_NZ777A",
+					"type": "string",
+					"value": "TNZ777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_O0777A",
+					"prompt": "TERA_DBNAME_O0777A",
+					"type": "string",
+					"value": "TO0777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_O1777A",
+					"prompt": "TERA_DBNAME_O1777A",
+					"type": "string",
+					"value": "TO1777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_O2777A",
+					"prompt": "TERA_DBNAME_O2777A",
+					"type": "string",
+					"value": "TO2777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_O4777A",
+					"prompt": "TERA_DBNAME_O4777A",
+					"type": "string",
+					"value": "TO4777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_O6777A",
+					"prompt": "TERA_DBNAME_O6777A",
+					"type": "string",
+					"value": "TO6777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_O8777A",
+					"prompt": "TERA_DBNAME_O8777A",
+					"type": "string",
+					"value": "TO8777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_OCSB0A",
+					"prompt": "TERA_DBNAME_OCSB0A",
+					"type": "string",
+					"value": "TOCSB0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_OMUT0A",
+					"prompt": "TERA_DBNAME_OMUT0A",
+					"type": "string",
+					"value": "TOMUT0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_ORCS0A",
+					"prompt": "TERA_DBNAME_ORCS0A",
+					"type": "string",
+					"value": "TORCS0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_OX777A",
+					"prompt": "TERA_DBNAME_OX777A",
+					"type": "string",
+					"value": "TOX777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_OZPR0A",
+					"prompt": "TERA_DBNAME_OZPR0A",
+					"type": "string",
+					"value": "TOZPR0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_P5777A",
+					"prompt": "TERA_DBNAME_P5777A",
+					"type": "string",
+					"value": "TP5777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_PA777A",
+					"prompt": "TERA_DBNAME_PA777A",
+					"type": "string",
+					"value": "TPA777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_PC777A",
+					"prompt": "TERA_DBNAME_PC777A",
+					"type": "string",
+					"value": "TPC777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_PF777A",
+					"prompt": "TERA_DBNAME_PF777A",
+					"type": "string",
+					"value": "TPF777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_PFMA0A",
+					"prompt": "TERA_DBNAME_PFMA0A",
+					"type": "string",
+					"value": "TPFMA0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_PORE0A",
+					"prompt": "TERA_DBNAME_PORE0A",
+					"type": "string",
+					"value": "TPORE0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_PP777A",
+					"prompt": "TERA_DBNAME_PP777A",
+					"type": "string",
+					"value": "TPP777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_Q2777A",
+					"prompt": "TERA_DBNAME_Q2777A",
+					"type": "string",
+					"value": "TQ2777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_Q8777A",
+					"prompt": "TERA_DBNAME_Q8777A",
+					"type": "string",
+					"value": "TQ8777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_QO777A",
+					"prompt": "TERA_DBNAME_QO777A",
+					"type": "string",
+					"value": "TQO777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_QS777A",
+					"prompt": "TERA_DBNAME_QS777A",
+					"type": "string",
+					"value": "TQS777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_R6777A",
+					"prompt": "TERA_DBNAME_R6777A",
+					"type": "string",
+					"value": "TR6777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_RINO0A",
+					"prompt": "TERA_DBNAME_RINO0A",
+					"type": "string",
+					"value": "TRINO0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_RRP10A",
+					"prompt": "TERA_DBNAME_RRP10A",
+					"type": "string",
+					"value": "TRRP10A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_S0GE0A",
+					"prompt": "TERA_DBNAME_S0GE0A",
+					"type": "string",
+					"value": "TS0GE0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_S7777A",
+					"prompt": "TERA_DBNAME_S7777A",
+					"type": "string",
+					"value": "TS7777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_SE777A",
+					"prompt": "TERA_DBNAME_SE777A",
+					"type": "string",
+					"value": "TSE777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_SSC10A",
+					"prompt": "TERA_DBNAME_SSC10A",
+					"type": "string",
+					"value": "TSSC10A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_SSC10D",
+					"prompt": "TERA_DBNAME_SSC10D",
+					"type": "string",
+					"value": "TSSC10D",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_SSC10W",
+					"prompt": "TERA_DBNAME_SSC10W",
+					"type": "string",
+					"value": "TSSC10W",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_SSL10A",
+					"prompt": "TERA_DBNAME_SSL10A",
+					"type": "string",
+					"value": "TSSL10A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_STAI0A",
+					"prompt": "TERA_DBNAME_STAI0A",
+					"type": "string",
+					"value": "TSTAI0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_SUBE0A",
+					"prompt": "TERA_DBNAME_SUBE0A",
+					"type": "string",
+					"value": "TSUBE0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_SUFR0A",
+					"prompt": "TERA_DBNAME_SUFR0A",
+					"type": "string",
+					"value": "TSUFR0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_T1777A",
+					"prompt": "TERA_DBNAME_T1777A",
+					"type": "string",
+					"value": "TT1777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_T4777A",
+					"prompt": "TERA_DBNAME_T4777A",
+					"type": "string",
+					"value": "TT4777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_TCDMV0A",
+					"prompt": "TERA_DBNAME_TCDMV0A",
+					"type": "string",
+					"value": "TCDMV0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_TLPD0A",
+					"prompt": "TERA_DBNAME_TLPD0A",
+					"type": "string",
+					"value": "TTLPD0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_TLTL0A",
+					"prompt": "TERA_DBNAME_TLTL0A",
+					"type": "string",
+					"value": "TTLTL0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_TLVI0A",
+					"prompt": "TERA_DBNAME_TLVI0A",
+					"type": "string",
+					"value": "TTLVI0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_TRAS0A",
+					"prompt": "TERA_DBNAME_TRAS0A",
+					"type": "string",
+					"value": "TTRAS0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_TY777A",
+					"prompt": "TERA_DBNAME_TY777A",
+					"type": "string",
+					"value": "TTY777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_UN777A",
+					"prompt": "TERA_DBNAME_UN777A",
+					"type": "string",
+					"value": "TUN777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_UU777A",
+					"prompt": "TERA_DBNAME_UU777A",
+					"type": "string",
+					"value": "TUU777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_VK777A",
+					"prompt": "TERA_DBNAME_VK777A",
+					"type": "string",
+					"value": "TVK777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_W4777A",
+					"prompt": "TERA_DBNAME_W4777A",
+					"type": "string",
+					"value": "TW4777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_WEBT0A",
+					"prompt": "TERA_DBNAME_WEBT0A",
+					"type": "string",
+					"value": "TWEBT0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_WK777A",
+					"prompt": "TERA_DBNAME_WK777A",
+					"type": "string",
+					"value": "TWK777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_WSIP0A",
+					"prompt": "TERA_DBNAME_WSIP0A",
+					"type": "string",
+					"value": "TWSIP0A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_X0777A",
+					"prompt": "TERA_DBNAME_X0777A",
+					"type": "string",
+					"value": "TX0777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_X3777A",
+					"prompt": "TERA_DBNAME_X3777A",
+					"type": "string",
+					"value": "TX3777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_X4777A",
+					"prompt": "TERA_DBNAME_X4777A",
+					"type": "string",
+					"value": "TX4777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_X6777A",
+					"prompt": "TERA_DBNAME_X6777A",
+					"type": "string",
+					"value": "TX6777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_X8777A",
+					"prompt": "TERA_DBNAME_X8777A",
+					"type": "string",
+					"value": "TX8777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_X9777A",
+					"prompt": "TERA_DBNAME_X9777A",
+					"type": "string",
+					"value": "TX9777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_XG777A",
+					"prompt": "TERA_DBNAME_XG777A",
+					"type": "string",
+					"value": "TXG777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_Z0777A",
+					"prompt": "TERA_DBNAME_Z0777A",
+					"type": "string",
+					"value": "TZ0777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_DBNAME_ZT777A",
+					"prompt": "TERA_DBNAME_ZT777A",
+					"type": "string",
+					"value": "TZT777A",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_SERVER_BFD",
+					"prompt": "TERA_SERVER_BFD",
+					"type": "string",
+					"value": "STDMOS03",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_SERVER_RADAR",
+					"prompt": "TERA_SERVER_RADAR",
+					"type": "string",
+					"value": "STDMOS03",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_USER_BFD10",
+					"prompt": "TERA_USER_BFD10",
+					"type": "string",
+					"value": "TBFD1_APP",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_USER_BFDA0",
+					"prompt": "TERA_USER_BFDA0",
+					"type": "string",
+					"value": "TBFDA_APP",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_USER_BFDL0",
+					"prompt": "TERA_USER_BFDL0",
+					"type": "string",
+					"value": "TBFDL_APP",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_USER_EZEX0",
+					"prompt": "TERA_USER_EZEX0",
+					"type": "string",
+					"value": "TEZEX_APP",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_USER_FBW1",
+					"prompt": "TERA_USER_FBW1",
+					"type": "string",
+					"value": "TFBW1_APP",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_USER_FBW2",
+					"prompt": "TERA_USER_FBW2",
+					"type": "string",
+					"value": "TFBW2_APP",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_USER_MRC10",
+					"prompt": "TERA_USER_MRC10",
+					"type": "string",
+					"value": "TMRC1_APP",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_USER_SSC10",
+					"prompt": "TERA_USER_SSC10",
+					"type": "string",
+					"value": "TSSC1_APP",
+					"subtype": ""
+				},
+				{
+					"name": "$USER_MDB",
+					"prompt": "User DB appoggio",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$USER_PS",
+					"prompt": "USER_PS",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$VERBOSE_LOG_APPLICATIVI",
+					"prompt": "VERBOSE (0=NONE,1=FUNZIONALE,2=FUNZIONALE+TECNICO)",
+					"type": "string",
+					"value": "1",
+					"subtype": ""
+				},
+				{
+					"name": "$WORK_DIR",
+					"prompt": "Workfiles directory",
+					"type": "string",
+					"value": "$PROJDEF (Replace with required value)",
+					"subtype": ""
+				},
+				{
+					"name": "$DBLOG_PASS",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}Kw/n0jxjekpJkwrPZ9ajSg==",
+					"subtype": ""
+				},
+				{
+					"name": "$HDP_PSW_SDL10",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}YfW1i6RsUCwDvF/x6PRhwA==",
+					"subtype": ""
+				},
+				{
+					"name": "$HDP_PSW_SDL10_NEW",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}Iz4kuTANAcmFbjeJfDHviQ==",
+					"subtype": ""
+				},
+				{
+					"name": "$ORCL_CDMV_PSW",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}3GG/Gwrnt/ZLkOQi4L86Pw==",
+					"subtype": ""
+				},
+				{
+					"name": "$ORCL_DTLY_PSW",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}vvOUc52iRuBKRR/0kUnC3A==",
+					"subtype": ""
+				},
+				{
+					"name": "$ORCL_SDL1_PSW",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}yaWNEV+G7Y7w9uw0yUeOcQ==",
+					"subtype": ""
+				},
+				{
+					"name": "$POST_BQBQ_PSW",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}e62VXcgBT/RQxU7A1Xxk4w==",
+					"subtype": ""
+				},
+				{
+					"name": "$POST_SDL1_USER",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}zkn4XGYFtI8k8R/EbFbM1A==",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_PSW_BFD10",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}MkX3ax9Vt02iIKyPFBQyig==",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_PSW_BFDA0",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}4YM7SzKgGKOvVdtwoOoUig==",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_PSW_BFDL0",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}Kw/n0jxjekpJkwrPZ9ajSg==",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_PSW_EZEX0",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}w/Ga6GWskFE8NpUFeuezIA==",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_PSW_MRC10",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}jivgcMMBSzzECar7nFCLvQ==",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_PSW_SSC10",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}SOqzBZ1SGsUgEmTzM0+hRw==",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_PSW_FBW1",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}MYK6PZBu1T74eaZt0xyXMA==",
+					"subtype": ""
+				},
+				{
+					"name": "$TERA_PSW_FBW2",
+					"prompt": "",
+					"type": "encrypted",
+					"value": "{dsnextenc}oVFwV7HRjMzIlH4F3Lnf3A==",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_PROJID_SSC0",
+					"prompt": "",
+					"type": "string",
+					"value": "prj-isp-sscc0-appl-svil-001",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_SSCC0D",
+					"prompt": "",
+					"type": "string",
+					"value": "SSCC0D",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_SSCC0W",
+					"prompt": "",
+					"type": "string",
+					"value": "SSCC0W",
+					"subtype": ""
+				},
+				{
+					"name": "$GCS_BUCKET_TMP",
+					"prompt": "",
+					"type": "string",
+					"value": "bkt-isp-sscc0-cp4d-svil-001-ew12",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_PROJID_R4777A",
+					"prompt": "",
+					"type": "string",
+					"value": "prj-isp-r4777-appl-svil-001",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_R4777A",
+					"type": "string",
+					"value": "R4777W",
+					"prompt": "",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_A1777A",
+					"type": "string",
+					"value": "A1777W",
+					"prompt": "",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_PROJID_A1777A",
+					"prompt": "",
+					"type": "string",
+					"value": "prj-isp-a1777-appl-svil-001",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_PROJID_A8777A",
+					"prompt": "",
+					"type": "string",
+					"value": "prj-isp-a8777-appl-svil-001",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_A8777A",
+					"type": "string",
+					"value": "A8777W",
+					"prompt": "",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_PROJID_A7777A",
+					"prompt": "",
+					"type": "string",
+					"value": "prj-isp-a7777-appl-svil-001",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_A7777A",
+					"type": "string",
+					"value": "A7777W",
+					"prompt": "",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_PROJID_ETFL0A",
+					"prompt": "",
+					"type": "string",
+					"value": "prj-isp-etfl0-appl-svil-001",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_ETFL0A",
+					"type": "string",
+					"value": "ETFL0W",
+					"prompt": "",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_PROJID_ANAG0A",
+					"prompt": "",
+					"type": "string",
+					"value": "prj-isp-anag0-appl-svil-001",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_ANAG0A",
+					"type": "string",
+					"value": "ANAG0W",
+					"prompt": "",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_PROJID_ZT777A",
+					"prompt": "",
+					"type": "string",
+					"value": "prj-isp-zt777-appl-svil-001",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_ZT777A",
+					"prompt": "",
+					"type": "string",
+					"value": "ZT777W",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_PROJID_T4777A",
+					"prompt": "",
+					"type": "string",
+					"value": "prj-isp-t4777-appl-svil-001",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_T4777A",
+					"type": "string",
+					"value": "T4777W",
+					"prompt": "",
+					"subtype": ""
+				},
+				{
+					"name": "$PATH_WORK",
+					"type": "string",
+					"value": "/mnts/BQBQ0_SVIL_CP4D/SSCC0/ITT/work/",
+					"prompt": "",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DBNAME_SSC10D",
+					"description": "",
+					"prompt": "$BQ_DBNAME_SSC10D",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DBNAME_SSC10W",
+					"description": "",
+					"prompt": "$BQ_DBNAME_SSC10W",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_SSC10W",
+					"description": "",
+					"prompt": "$BQ_DSNAME_SSC10W",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_SSC10D",
+					"description": "",
+					"prompt": "$BQ_DSNAME_SSC10D",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_PROJID_PA777A",
+					"description": "",
+					"prompt": "$BQ_PROJID_PA777A",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_PA777A",
+					"type": "string",
+					"value": "PA777W",
+					"prompt": "$BQ_DSNAME_PA777A",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVE_DB_R4777",
+					"description": "",
+					"prompt": "HIVE_DB_R4777",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVE_DB_A7777",
+					"description": "",
+					"prompt": "HIVE_DB_A7777",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVE_DB_A1777",
+					"description": "",
+					"prompt": "HIVE_DB_A1777",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$APT_CONFIG_FILE",
+					"prompt": "APT_CONFIG_FILE",
+					"type": "string",
+					"value": "PIPPO",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVE_DIR_SCH10",
+					"description": "",
+					"prompt": "HIVE_DIR_SCH10",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVEPASSWORD",
+					"description": "",
+					"prompt": "HIVEPASSWORD",
+					"type": "encrypted",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$HDFS_PORT",
+					"description": "",
+					"prompt": "HDFS_PORT",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$HDFS_SERVER",
+					"description": "",
+					"prompt": "HDFS_SERVER",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$HDFS_ROOT_DIR",
+					"description": "",
+					"prompt": "HDFS_ROOT_DIR",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$HDP_PSW_SCH10",
+					"description": "",
+					"prompt": "HDP_PSW_SCH10",
+					"type": "encrypted",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$HDP_USER_SCH10",
+					"description": "",
+					"prompt": "HDP_USER_SCH10",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$HIVEUSERNAME",
+					"description": "",
+					"prompt": "HIVEUSERNAME",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$HADOOP_SERVER",
+					"description": "",
+					"prompt": "HADOOP_SERVER",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$HADOOP_PORT",
+					"description": "",
+					"prompt": "HADOOP_PORT",
+					"type": "string",
+					"value": "",
+					"subtype": ""
+				},
+				{
+					"name": "$TZ",
+					"type": "string",
+					"value": "CET",
+					"prompt": "Time zone",
+					"subtype": ""
+				},
+				{
+					"name": "$POST_DBNAME_SSCC",
+					"type": "string",
+					"value": "sscc_own",
+					"prompt": "POSTGRES_SSCC",
+					"subtype": ""
+				},
+				{
+					"name": "$BUCKET_FILEDATA",
+					"type": "string",
+					"value": "bkt-isp-sscc0-appl-svil-001-ew12/filesnd",
+					"prompt": "bucket repository",
+					"subtype": ""
+				},
+				{
+					"name": "PATH_SCRIPT",
+					"type": "string",
+					"value": "/mnts/BQBQ0_SVIL_CP4D/SSCC0/ITT/bin/",
+					"prompt": "PATH_SCRIPT",
+					"subtype": ""
+				},
+				{
+					"name": "TEMP_DIR",
+					"type": "string",
+					"value": "/mnts/BQBQ0_SVIL_CP4D/SSCC0/ITT/tmp/",
+					"prompt": "TEMP_DIR",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_UDF_DSNAME_SSCC0D",
+					"type": "string",
+					"value": "SSCC0D",
+					"prompt": "BQ_UDF_DSNAME_SSCC0D",
+					"subtype": ""
+				},
+				{
+					"name": "PATH_FILE",
+					"type": "string",
+					"value": "/mnts/BQBQ0_SVIL_CP4D/SSCC0/ITT/out/",
+					"prompt": "PATH_FILE ",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_UDF_PROJID_SSC0",
+					"type": "string",
+					"value": "prj-isp-sscc0-appl-svil-001",
+					"prompt": "$BQ_UDF_PROJID_SSC0",
+					"subtype": ""
+				},
+				{
+					"name": "$BUCKET_FILEDATA_OUT",
+					"type": "string",
+					"value": "bkt-isp-sscc0-appl-svil-001-ew12/out",
+					"prompt": "$BUCKET_FILEDATA_OUT",
+					"subtype": ""
+				},
+				{
+					"name": "$BUCKET_FILEDATA_IN",
+					"type": "string",
+					"value": "bkt-isp-sscc0-appl-svil-001-ew12/in",
+					"prompt": "$BUCKET_FILEDATA_IN",
+					"subtype": ""
+				},
+				{
+					"name": "$BQ_DSNAME_SSCC0A",
+					"type": "string",
+					"value": "SSCC0A",
+					"prompt": "$BQ_DSNAME_SSCC0A",
+					"subtype": ""
+				},
+				{
+					"name": "PATH_TEMP",
+					"type": "string",
+					"value": "/mnts/BQBQ0_SVIL_CP4D/SSCC0/ITT/tmp/",
+					"prompt": "PATH_TEMP",
+					"subtype": ""
+				},
+				{
+					"name": "PATH_SEQ_TEMP",
+					"type": "string",
+					"value": "/mnts/BQBQ0_SVIL_CP4D/SSCC0/ITT/tmp/",
+					"prompt": "PATH_SEQ_TEMP",
+					"subtype": ""
+				},
+				{
+					"name": "PATH_SHELL",
+					"type": "string",
+					"value": "/mnts/BQBQ0_SVIL_CP4D/SSCC0/ITT/bin/",
+					"prompt": "PATH_SHELL",
+					"subtype": ""
+				},
+				{
+					"name": "BQ_HEAP_SIZE",
+					"type": "int64",
+					"value": 1024,
+					"prompt": "BQ_HEAP_SIZE",
+					"subtype": ""
+				},
+				{
+					"name": "$APT_STRING_PADCHAR",
+					"type": "string",
+					"value": "0x20",
+					"prompt": "Pad character",
+					"subtype": ""
+				}
+			],
+			"value_sets": []
+		}
+	}
+}

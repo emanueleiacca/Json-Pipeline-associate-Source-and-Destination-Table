@@ -1,8 +1,8 @@
 import json
 import networkx as nx
 import pandas as pd
-from utils import *
-from utility import *
+from utils_data_pipelines import *
+
 
 json_path = 'json_file\hard.json' # Replace with your JSON file path
 field_in_eachNode = main(json_path)

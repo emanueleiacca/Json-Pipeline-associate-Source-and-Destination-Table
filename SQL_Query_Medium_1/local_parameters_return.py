@@ -16,11 +16,10 @@ def load_local_parameters(file_path):
         "Prompt": param['prompt']
     } for param in local_parameters]
 '''
-if __name__ == "__main__":
-    parameters = load_local_parameters(file_path)
-    for param in parameters:
-        print(f"Name: {param['Name']}")
-        print(f"Type: {param['Type']}")
-        print(f"Default Value: {param['Default Value']}")
-        print(f"Prompt: {param['Prompt']}\n")
+parameters = load_local_parameters(file_path)
+for param in parameters:
+    print(f"Name: {param['Name']}")
+    print(f"Type: {param['Type']}")
+    print(f"Default Value: {param['Default Value']}")
+    print(f"Prompt: {param['Prompt']}\n")
 '''
