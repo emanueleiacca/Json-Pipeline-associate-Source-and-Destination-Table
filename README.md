@@ -9,8 +9,10 @@ It includes scripts to create Excel tables, plot graphs, and utility functions t
 - [Overview](#overview)
 - [Data](#data)
 - [Features](#features)
+- [SQL Query Analysis and Parsing Enhancements](#SQLQueryAnalysisandParsingEnhancements)
+- [Github and Library Information](#GithubandLibraryInformation)
+- [Current Limitations and Future Work](#CurrentLimitationsandFutureWork)
 - [License](#license)
-- [SQL Query Analysis and Parsing Enhancements](#SQL Query Analysis and Parsing Enhancements)
 
 
 ## Overview
