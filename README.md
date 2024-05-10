@@ -9,7 +9,11 @@ It includes scripts to create Excel tables, plot graphs, and utility functions t
 - [Overview](#overview)
 - [Data](#data)
 - [Features](#features)
+- [SQL Query Analysis and Parsing Enhancements](#SQLQueryAnalysisandParsingEnhancements)
+- [Github and Library Information](#GithubandLibraryInformation)
+- [Current Limitations and Future Work](#CurrentLimitationsandFutureWork)
 - [License](#license)
+
 
 ## Overview
 
@@ -42,6 +46,27 @@ The input data are JSON file containing the pipeline to analyze. Accenture provi
 - Scripts for plotting data-related graphs.
 - Utilities with helpfull function in the field of Data pipeline
 - Explanations of pipeline nodes, schema, connections and fields.
+
+# SQL Query Analysis and Parsing Enhancements:
+
+To meet the challenge of interpreting complex SQL queries embedded within JSON-defined data pipelines, we've developed a new parser that outclasses the other SQL Parser online on this particular task. These improvements facilitate to retrieve info regarding how data is manipulated and transferred across systems. Key features of the bespoke SQL parser include:
+
+- Focused Parsing Strategy: The parser strategically focuses on the most inner parentheses within SQL queries. This approach is crucial for avoiding confusion caused by nested functions and complex SQL expressions. By targeting these innermost elements, the parser can extract essential column names without being misled by surrounding SQL syntax, ensuring that only relevant data is considered for analysis.
+- Alias Resolution: A common challenge in SQL queries is the use of aliases, which can obscure the origins and destinations of data. Our parser effectively identifies these aliases and substitutes them with the actual table names from the database schema.
+- Placeholder Management: Placeholders often represent dynamic elements within SQL queries, which can vary from one execution to another. Our parser not only detects these placeholders but also manages them by replacing the placeholder with its correct value and it also deal with values marked as "PROJDEF" with their actual values from an auxiliary configuration file. This feature is particularly useful in environments where configurations change frequently, as it allows the tool to adapt to new data contexts without manual intervention.
+
+## Github and Library Information:
+
+The generalized version of this SQL parser has been made available as an open-source library to benefit the wider community. Developers and data engineers can access this library to implement similar parsing capabilities in their own projects. For more details and to access the library, please visit the [SQLParserDataPipeline](https://github.com/emanueleiacca/SQLParserDataPipeline) project on GitHub and the library on [PyPI](https://pypi.org/project/SQLParserDataPipeline/).
+
+## Current Limitations and Future Work:
+
+- Scope of Parsing Capabilities: Currently, the enhanced parsing capabilities are optimized specifically for the 'hard' JSON file format, which includes the most complex and varied data flows. This focus was necessary due to the intricate structures and multiple data transformations typical in these files. We plan to extend these advanced parsing techniques to 'easy' and 'medium' difficulty levels through additional preprocessing steps, allowing for broader applicability of the tool across different pipeline complexities.
+
+- The code for 'easy' and 'medium' difficulty levels instead, work perfectly fine for everyone, so we can say that we managed to generalize and iterate the problem.
+
+- Integration with Data Flow Visualization Tool: The ultimate goal is to fully integrate these SQL parsing features into the main visualization tool. This integration will provide users with a comprehensive view of data lineage, from source to destination, including transformations at each step. By visualizing how SQL transformations manipulate data, users can gain insights into the efficiency and effectiveness of their data pipelines.
+
 
 ## License
 
