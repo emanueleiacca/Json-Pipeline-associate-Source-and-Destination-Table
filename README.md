@@ -55,6 +55,18 @@ To meet the challenge of interpreting complex SQL queries embedded within JSON-d
 - Alias Resolution: A common challenge in SQL queries is the use of aliases, which can obscure the origins and destinations of data. Our parser effectively identifies these aliases and substitutes them with the actual table names from the database schema.
 - Placeholder Management: Placeholders often represent dynamic elements within SQL queries, which can vary from one execution to another. Our parser not only detects these placeholders but also manages them by replacing the placeholder with its correct value and it also deal with values marked as "PROJDEF" with their actual values from an auxiliary configuration file. This feature is particularly useful in environments where configurations change frequently, as it allows the tool to adapt to new data contexts without manual intervention.
 
+## Code Structure and Testing Strategy
+To ensure robustness and functionality at every level of pipeline complexity, our code testing follows a methodical approach, starting from the simplest scenarios (easy level) and progressing to more complex ones. Below is an overview of the structure for each JSON file:
+
+### Structure of Code Testing for Each Level:
+- Select.py: To extract column names and their respective aliases from the SQL queries.
+- Table.py: To retrieve table information (table names and their aliases) from the FROM clause of SQL queries,accommodating scenarios involving multiple tables.
+- Innest.py: To verify the effectiveness of the method focusing on the most inner parentheses.
+- Unnest.py: This part tests the parser’s capability to handle and simplify data derived from intricate JOIN operations, ensuring only essential data is considered.
+- Placeholders.py: Includes functions to detect placeholders and appropriately substitute them using values from either internal configurations or an external file.
+- Final.py: The final code consolidates all parsing strategies to form a complete and operational script, demonstrating the tool’s full capabilities in a cohesive manner.
+Final_df: Instead of printing results, this script saves them directly to an Excel file (.xlsx).
+
 ## Github and Library Information:
 
 The generalized version of this SQL parser has been made available as an open-source library to benefit the wider community. Developers and data engineers can access this library to implement similar parsing capabilities in their own projects. For more details and to access the library, please visit the [SQLParserDataPipeline](https://github.com/emanueleiacca/SQLParserDataPipeline) project on GitHub and the library on [PyPI](https://pypi.org/project/SQLParserDataPipeline/).
